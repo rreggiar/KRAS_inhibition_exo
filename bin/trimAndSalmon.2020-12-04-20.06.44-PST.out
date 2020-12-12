@@ -1,0 +1,1063 @@
+cmd: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D exo /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1
++ ./trimmomaticRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG exo
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
+trimmomatic: 0.39
++ echo 'read 1:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R1_001.fastq.gz
+read 1: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R1_001.fastq.gz
++ echo 'read 2:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R2_001.fastq.gz
+read 2: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R2_001.fastq.gz
++ echo 'Trimming fastq'
+Trimming fastq
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
++ trimmomatic PE -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_1_S1_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 2571324 Both Surviving: 2362575 (91.88%) Forward Only Surviving: 113843 (4.43%) Reverse Only Surviving: 50252 (1.95%) Dropped: 44654 (1.74%)
+TrimmomaticPE: Completed successfully
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./salmonRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+cmd: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+salmon version: salmon 1.3.0
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
+output: rnaEASY.3D.1.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
++ [[ ! -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/quant.sf ]]
++ mkdir /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
++ '[' -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_single_end.fq.gz ']'
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
++ trim_fwd=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG
++ trim_rev=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
++ salmon quant -i /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 --libType A -1 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_paired.fq.gz -2 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz -p 8 --validateMappings --gcBias --seqBias --recoverOrphans --rangeFactorizationBins 4 --output /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+###
+### salmon (selective-alignment-based) v1.3.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 }
+### [ libType ] => { A }
+### [ mates1 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_paired.fq.gz }
+### [ mates2 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz }
+### [ threads ] => { 8 }
+### [ validateMappings ] => { }
+### [ gcBias ] => { }
+### [ seqBias ] => { }
+### [ recoverOrphans ] => { }
+### [ rangeFactorizationBins ] => { 4 }
+### [ output ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST }
+Logs will be written to /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/logs
+[2020-12-04 20:09:02.670] [jointLog] [info] setting maxHashResizeThreads to 8
+[2020-12-04 20:09:02.670] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-12-04 20:09:02.670] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-12-04 20:09:02.671] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-12-04 20:09:02.671] [jointLog] [info] parsing read library format
+[2020-12-04 20:09:02.671] [jointLog] [info] There is 1 library.
+[2020-12-04 20:09:02.775] [jointLog] [info] Loading pufferfish index
+[2020-12-04 20:09:02.780] [jointLog] [info] Loading dense pufferfish index.
+-----------------------------------------
+| Loading contig table | Time = 104.06 s
+-----------------------------------------
+size = 45236907
+-----------------------------------------
+| Loading contig offsets | Time = 149.38 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 23.064 ms
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.5577 s
+-----------------------------------------
+size = 4035132990
+Number of ones: 45236906
+Number of ones per inventory item: 512
+Inventory entries filled: 88354
+-----------------------------------------
+| Loading contig boundaries | Time = 16.852 s
+-----------------------------------------
+size = 4035132990
+-----------------------------------------
+| Loading sequence | Time = 888.65 ms
+-----------------------------------------
+size = 2678025810
+-----------------------------------------
+| Loading positions | Time = 8.7481 s
+-----------------------------------------
+size = 4989818310
+-----------------------------------------
+| Loading reference sequence | Time = 938.83 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 39.313 ms
+-----------------------------------------
+[2020-12-04 20:11:16.071] [jointLog] [info] done
+[2020-12-04 20:11:16.071] [jointLog] [info] Index contained 5,386,122 targets
+[2020-12-04 20:11:54.154] [jointLog] [info] Number of decoys : 183
+[2020-12-04 20:11:54.154] [jointLog] [info] First decoy index : 5,187,435 
+
+
+
+
+[2020-12-04 20:12:05.725] [jointLog] [info] Automatically detected most likely library type as IU
+[A[32mprocessed[31m 500,000 [32mfragments[0m
+hits: 213,814, hits per frag:  0.42807[A[32mprocessed[31m 1,000,000 [32mfragments[0m
+hits: 427,465, hits per frag:  0.429023[A[32mprocessed[31m 1,500,000 [32mfragments[0m
+hits: 643,752, hits per frag:  0.440328[A[32mprocessed[31m 2,000,000 [32mfragments[0m
+hits: 858,785, hits per frag:  0.437779
+
+
+
+
+
+
+
+[2020-12-04 20:15:10.282] [jointLog] [info] Computed 91,739 rich equivalence classes for further processing
+[2020-12-04 20:15:10.282] [jointLog] [info] Counted 757,974 total reads in the equivalence classes 
+[2020-12-04 20:15:10.288] [jointLog] [info] Number of orphans recovered using orphan rescue : 350,420
+[2020-12-04 20:15:10.288] [jointLog] [info] Number of mappings discarded because of alignment score : 12,185,827
+[2020-12-04 20:15:10.288] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 1,151,927
+[2020-12-04 20:15:10.288] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 398,314
+[2020-12-04 20:15:10.288] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 680,121
+[2020-12-04 20:15:11.585] [jointLog] [warning] Only 757974 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-12-04 20:15:11.585] [jointLog] [info] Mapping rate = 32.0825%
+
+[2020-12-04 20:15:11.585] [jointLog] [info] finished quantifyLibrary()
+[2020-12-04 20:15:11.596] [jointLog] [info] Starting optimizer
+[2020-12-04 20:15:15.203] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-12-04 20:15:15.564] [jointLog] [info] iteration = 0 | max rel diff. = 12.9151
+[2020-12-04 20:15:19.219] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-12-04 20:16:33.585] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-12-04 20:16:33.585] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-12-04 20:16:36.745] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-12-04 20:16:42.622] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-12-04 20:16:50.991] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-12-04 20:16:58.614] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-12-04 20:17:04.215] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-12-04 20:17:10.648] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-12-04 20:17:16.306] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-12-04 20:17:22.250] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-12-04 20:17:28.957] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-12-04 20:17:42.057] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 20:17:45.100] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 20:18:18.199] [jointLog] [info] iteration = 100 | max rel diff. = 15.3798
+[2020-12-04 20:18:55.028] [jointLog] [info] iteration = 200 | max rel diff. = 0.0595312
+[2020-12-04 20:19:31.597] [jointLog] [info] iteration = 300 | max rel diff. = 0.163564
+[2020-12-04 20:19:34.505] [jointLog] [info] iteration = 309 | max rel diff. = 0.00101227
+[2020-12-04 20:19:35.697] [jointLog] [info] Finished optimizer
+[2020-12-04 20:19:35.697] [jointLog] [info] writing output 
+
+[2020-12-04 20:19:51.476] [jointLog] [warning] NOTE: Read Lib [[ /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_forward_paired.fq.gz, /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.AMG/rnaEASY.3D.1.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/lib_format_counts.json for details
+
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./trimmomaticRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO exo
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
+trimmomatic: 0.39
++ echo 'read 1:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R1_001.fastq.gz
+read 1: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R1_001.fastq.gz
++ echo 'read 2:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R2_001.fastq.gz
+read 2: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R2_001.fastq.gz
++ echo 'Trimming fastq'
+Trimming fastq
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
++ trimmomatic PE -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_1_S4_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 3716711 Both Surviving: 3380824 (90.96%) Forward Only Surviving: 170338 (4.58%) Reverse Only Surviving: 79927 (2.15%) Dropped: 85622 (2.30%)
+TrimmomaticPE: Completed successfully
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./salmonRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+cmd: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+salmon version: salmon 1.3.0
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
+output: rnaEASY.3D.1.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
++ [[ ! -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/quant.sf ]]
++ mkdir /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
++ '[' -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_single_end.fq.gz ']'
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
++ trim_fwd=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO
++ trim_rev=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
++ salmon quant -i /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 --libType A -1 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz -2 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz -p 8 --validateMappings --gcBias --seqBias --recoverOrphans --rangeFactorizationBins 4 --output /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+###
+### salmon (selective-alignment-based) v1.3.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 }
+### [ libType ] => { A }
+### [ mates1 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz }
+### [ mates2 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz }
+### [ threads ] => { 8 }
+### [ validateMappings ] => { }
+### [ gcBias ] => { }
+### [ seqBias ] => { }
+### [ recoverOrphans ] => { }
+### [ rangeFactorizationBins ] => { 4 }
+### [ output ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST }
+Logs will be written to /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.1.DMSO/rnaEASY.3D.1.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/logs
+[2020-12-04 20:23:31.351] [jointLog] [info] setting maxHashResizeThreads to 8
+[2020-12-04 20:23:31.351] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-12-04 20:23:31.351] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-12-04 20:23:31.351] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-12-04 20:23:31.351] [jointLog] [info] parsing read library format
+[2020-12-04 20:23:31.351] [jointLog] [info] There is 1 library.
+[2020-12-04 20:23:31.420] [jointLog] [info] Loading pufferfish index
+[2020-12-04 20:23:31.421] [jointLog] [info] Loading dense pufferfish index.
+-----------------------------------------
+| Loading contig table | Time = 101.43 s
+-----------------------------------------
+size = 45236907
+-----------------------------------------
+| Loading contig offsets | Time = 209.34 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 22.764 ms
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.4438 s
+-----------------------------------------
+size = 4035132990
+Number of ones: 45236906
+Number of ones per inventory item: 512
+Inventory entries filled: 88354
+-----------------------------------------
+| Loading contig boundaries | Time = 15.818 s
+-----------------------------------------
+size = 4035132990
+-----------------------------------------
+| Loading sequence | Time = 792.93 ms
+-----------------------------------------
+size = 2678025810
+-----------------------------------------
+| Loading positions | Time = 7.7638 s
+-----------------------------------------
+size = 4989818310
+-----------------------------------------
+| Loading reference sequence | Time = 843.91 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 38.251 ms
+-----------------------------------------
+[2020-12-04 20:25:39.819] [jointLog] [info] done
+[2020-12-04 20:25:39.819] [jointLog] [info] Index contained 5,386,122 targets
+[2020-12-04 20:26:15.935] [jointLog] [info] Number of decoys : 183
+[2020-12-04 20:26:15.935] [jointLog] [info] First decoy index : 5,187,435 
+
+
+
+
+[2020-12-04 20:26:26.018] [jointLog] [info] Automatically detected most likely library type as IU
+[A[32mprocessed[31m 500,000 [32mfragments[0m
+hits: 485,066, hits per frag:  1.04413[A[32mprocessed[31m 1,000,000 [32mfragments[0m
+hits: 957,727, hits per frag:  0.989719[A[32mprocessed[31m 1,500,000 [32mfragments[0m
+hits: 1,432,692, hits per frag:  0.959764[A[32mprocessed[31m 2,000,000 [32mfragments[0m
+hits: 1,915,504, hits per frag:  0.975746[A[32mprocessed[31m 2,500,000 [32mfragments[0m
+hits: 2,395,939, hits per frag:  0.969153[A[32mprocessed[31m 3,000,000 [32mfragments[0m
+hits: 2,876,422, hits per frag:  0.970717
+
+
+
+
+
+
+
+[2020-12-04 20:32:07.253] [jointLog] [info] Computed 162,787 rich equivalence classes for further processing
+[2020-12-04 20:32:07.254] [jointLog] [info] Counted 1,108,154 total reads in the equivalence classes 
+[2020-12-04 20:32:07.263] [jointLog] [info] Number of orphans recovered using orphan rescue : 516,113
+[2020-12-04 20:32:07.263] [jointLog] [info] Number of mappings discarded because of alignment score : 18,399,190
+[2020-12-04 20:32:07.263] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 1,634,841
+[2020-12-04 20:32:07.263] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 502,367
+[2020-12-04 20:32:07.263] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 968,083
+[2020-12-04 20:32:08.538] [jointLog] [warning] Only 1108154 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-12-04 20:32:08.538] [jointLog] [info] Mapping rate = 32.7776%
+
+[2020-12-04 20:32:08.538] [jointLog] [info] finished quantifyLibrary()
+[2020-12-04 20:32:08.620] [jointLog] [info] Starting optimizer
+[2020-12-04 20:32:12.252] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-12-04 20:32:12.634] [jointLog] [info] iteration = 0 | max rel diff. = 19.0906
+[2020-12-04 20:32:16.298] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-12-04 20:33:58.316] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-12-04 20:33:58.317] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-12-04 20:34:01.642] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-12-04 20:34:06.856] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-12-04 20:34:13.175] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-12-04 20:34:18.763] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-12-04 20:34:23.647] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-12-04 20:34:28.630] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-12-04 20:34:33.226] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-12-04 20:34:41.831] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-12-04 20:34:58.508] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-12-04 20:35:21.117] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 20:35:21.149] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 20:35:53.911] [jointLog] [info] iteration = 100 | max rel diff. = 7.79998
+[2020-12-04 20:36:30.245] [jointLog] [info] iteration = 200 | max rel diff. = 0.299954
+[2020-12-04 20:37:07.049] [jointLog] [info] iteration = 300 | max rel diff. = 0.0444443
+[2020-12-04 20:37:33.992] [jointLog] [info] iteration = 374 | max rel diff. = 0.00695018
+[2020-12-04 20:37:35.164] [jointLog] [info] Finished optimizer
+[2020-12-04 20:37:35.164] [jointLog] [info] writing output 
+
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./trimmomaticRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG exo
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
+trimmomatic: 0.39
++ echo 'read 1:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R1_001.fastq.gz
+read 1: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R1_001.fastq.gz
++ echo 'read 2:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R2_001.fastq.gz
+read 2: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R2_001.fastq.gz
++ echo 'Trimming fastq'
+Trimming fastq
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
++ trimmomatic PE -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_2_S2_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 4506794 Both Surviving: 3945467 (87.54%) Forward Only Surviving: 286236 (6.35%) Reverse Only Surviving: 106844 (2.37%) Dropped: 168247 (3.73%)
+TrimmomaticPE: Completed successfully
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./salmonRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+cmd: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+salmon version: salmon 1.3.0
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
+output: rnaEASY.3D.2.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
++ [[ ! -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/quant.sf ]]
++ mkdir /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
++ '[' -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_single_end.fq.gz ']'
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
++ trim_fwd=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG
++ trim_rev=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
++ salmon quant -i /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 --libType A -1 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_paired.fq.gz -2 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz -p 8 --validateMappings --gcBias --seqBias --recoverOrphans --rangeFactorizationBins 4 --output /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+###
+### salmon (selective-alignment-based) v1.3.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 }
+### [ libType ] => { A }
+### [ mates1 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_paired.fq.gz }
+### [ mates2 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz }
+### [ threads ] => { 8 }
+### [ validateMappings ] => { }
+### [ gcBias ] => { }
+### [ seqBias ] => { }
+### [ recoverOrphans ] => { }
+### [ rangeFactorizationBins ] => { 4 }
+### [ output ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST }
+Logs will be written to /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/logs
+[2020-12-04 20:41:23.844] [jointLog] [info] setting maxHashResizeThreads to 8
+[2020-12-04 20:41:23.844] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-12-04 20:41:23.844] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-12-04 20:41:23.844] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-12-04 20:41:23.844] [jointLog] [info] parsing read library format
+[2020-12-04 20:41:23.844] [jointLog] [info] There is 1 library.
+[2020-12-04 20:41:23.918] [jointLog] [info] Loading pufferfish index
+[2020-12-04 20:41:23.919] [jointLog] [info] Loading dense pufferfish index.
+-----------------------------------------
+| Loading contig table | Time = 105.65 s
+-----------------------------------------
+size = 45236907
+-----------------------------------------
+| Loading contig offsets | Time = 147.35 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 22.822 ms
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.4217 s
+-----------------------------------------
+size = 4035132990
+Number of ones: 45236906
+Number of ones per inventory item: 512
+Inventory entries filled: 88354
+-----------------------------------------
+| Loading contig boundaries | Time = 15.87 s
+-----------------------------------------
+size = 4035132990
+-----------------------------------------
+| Loading sequence | Time = 779.52 ms
+-----------------------------------------
+size = 2678025810
+-----------------------------------------
+| Loading positions | Time = 7.8042 s
+-----------------------------------------
+size = 4989818310
+-----------------------------------------
+| Loading reference sequence | Time = 848.87 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 37.677 ms
+-----------------------------------------
+[2020-12-04 20:43:36.525] [jointLog] [info] done
+[2020-12-04 20:43:36.525] [jointLog] [info] Index contained 5,386,122 targets
+[2020-12-04 20:44:13.990] [jointLog] [info] Number of decoys : 183
+[2020-12-04 20:44:13.990] [jointLog] [info] First decoy index : 5,187,435 
+
+
+
+
+[2020-12-04 20:44:25.840] [jointLog] [info] Automatically detected most likely library type as IU
+[A[32mprocessed[31m 500,000 [32mfragments[0m
+hits: 201,406, hits per frag:  0.42615[A[32mprocessed[31m 1,000,000 [32mfragments[0m
+hits: 397,971, hits per frag:  0.400215[A[32mprocessed[31m 1,500,000 [32mfragments[0m
+hits: 607,626, hits per frag:  0.411741[A[32mprocessed[31m 2,000,000 [32mfragments[0m
+hits: 819,084, hits per frag:  0.411307[A[32mprocessed[31m 2,500,000 [32mfragments[0m
+hits: 1,021,536, hits per frag:  0.410956[A[32mprocessed[31m 3,000,000 [32mfragments[0m
+hits: 1,217,035, hits per frag:  0.410489[A[32mprocessed[31m 3,500,000 [32mfragments[0m
+hits: 1,427,278, hits per frag:  0.411594
+
+
+
+
+
+
+
+[2020-12-04 20:48:43.135] [jointLog] [info] Computed 80,572 rich equivalence classes for further processing
+[2020-12-04 20:48:43.135] [jointLog] [info] Counted 1,230,374 total reads in the equivalence classes 
+[2020-12-04 20:48:43.141] [jointLog] [info] Number of orphans recovered using orphan rescue : 539,022
+[2020-12-04 20:48:43.141] [jointLog] [info] Number of mappings discarded because of alignment score : 22,372,915
+[2020-12-04 20:48:43.141] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 2,114,829
+[2020-12-04 20:48:43.141] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 351,267
+[2020-12-04 20:48:43.141] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 1,620,252
+[2020-12-04 20:48:44.407] [jointLog] [warning] Only 1230374 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-12-04 20:48:44.407] [jointLog] [info] Mapping rate = 31.1845%
+
+[2020-12-04 20:48:44.407] [jointLog] [info] finished quantifyLibrary()
+[2020-12-04 20:48:44.517] [jointLog] [info] Starting optimizer
+[2020-12-04 20:48:48.031] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-12-04 20:48:48.381] [jointLog] [info] iteration = 0 | max rel diff. = 21.2743
+[2020-12-04 20:48:51.874] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-12-04 20:50:03.417] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-12-04 20:50:03.420] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-12-04 20:50:09.976] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-12-04 20:50:16.982] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-12-04 20:50:24.063] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-12-04 20:50:27.634] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-12-04 20:50:31.222] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-12-04 20:50:41.330] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-12-04 20:50:44.913] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-12-04 20:50:49.186] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-12-04 20:50:52.682] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-12-04 20:51:03.819] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 20:51:36.168] [jointLog] [info] iteration = 100 | max rel diff. = 0.0276419
+[2020-12-04 20:52:01.875] [jointLog] [info] iteration = 171 | max rel diff. = 0.00994469
+[2020-12-04 20:52:03.057] [jointLog] [info] Finished optimizer
+[2020-12-04 20:52:03.057] [jointLog] [info] writing output 
+
+[2020-12-04 20:52:18.860] [jointLog] [warning] NOTE: Read Lib [[ /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_forward_paired.fq.gz, /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.AMG/rnaEASY.3D.2.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/lib_format_counts.json for details
+
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./trimmomaticRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO exo
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
+trimmomatic: 0.39
++ echo 'read 1:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R1_001.fastq.gz
+read 1: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R1_001.fastq.gz
++ echo 'read 2:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R2_001.fastq.gz
+read 2: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R2_001.fastq.gz
++ echo 'Trimming fastq'
+Trimming fastq
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
++ trimmomatic PE -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_2_S5_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 5206817 Both Surviving: 4789739 (91.99%) Forward Only Surviving: 237359 (4.56%) Reverse Only Surviving: 109294 (2.10%) Dropped: 70425 (1.35%)
+TrimmomaticPE: Completed successfully
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./salmonRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+cmd: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+salmon version: salmon 1.3.0
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
+output: rnaEASY.3D.2.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
++ [[ ! -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/quant.sf ]]
++ mkdir /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
++ '[' -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_single_end.fq.gz ']'
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
++ trim_fwd=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO
++ trim_rev=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
++ salmon quant -i /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 --libType A -1 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz -2 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz -p 8 --validateMappings --gcBias --seqBias --recoverOrphans --rangeFactorizationBins 4 --output /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+###
+### salmon (selective-alignment-based) v1.3.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 }
+### [ libType ] => { A }
+### [ mates1 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz }
+### [ mates2 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz }
+### [ threads ] => { 8 }
+### [ validateMappings ] => { }
+### [ gcBias ] => { }
+### [ seqBias ] => { }
+### [ recoverOrphans ] => { }
+### [ rangeFactorizationBins ] => { 4 }
+### [ output ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST }
+Logs will be written to /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.2.DMSO/rnaEASY.3D.2.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/logs
+[2020-12-04 20:57:12.065] [jointLog] [info] setting maxHashResizeThreads to 8
+[2020-12-04 20:57:12.065] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-12-04 20:57:12.065] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-12-04 20:57:12.065] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-12-04 20:57:12.065] [jointLog] [info] parsing read library format
+[2020-12-04 20:57:12.065] [jointLog] [info] There is 1 library.
+[2020-12-04 20:57:12.138] [jointLog] [info] Loading pufferfish index
+[2020-12-04 20:57:12.138] [jointLog] [info] Loading dense pufferfish index.
+-----------------------------------------
+| Loading contig table | Time = 109.18 s
+-----------------------------------------
+size = 45236907
+-----------------------------------------
+| Loading contig offsets | Time = 139.44 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 22.674 ms
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.4217 s
+-----------------------------------------
+size = 4035132990
+Number of ones: 45236906
+Number of ones per inventory item: 512
+Inventory entries filled: 88354
+-----------------------------------------
+| Loading contig boundaries | Time = 15.702 s
+-----------------------------------------
+size = 4035132990
+-----------------------------------------
+| Loading sequence | Time = 775.02 ms
+-----------------------------------------
+size = 2678025810
+-----------------------------------------
+| Loading positions | Time = 7.7762 s
+-----------------------------------------
+size = 4989818310
+-----------------------------------------
+| Loading reference sequence | Time = 846.96 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 37.539 ms
+-----------------------------------------
+[2020-12-04 20:59:28.080] [jointLog] [info] done
+[2020-12-04 20:59:28.080] [jointLog] [info] Index contained 5,386,122 targets
+[2020-12-04 21:00:05.604] [jointLog] [info] Number of decoys : 183
+[2020-12-04 21:00:05.604] [jointLog] [info] First decoy index : 5,187,435 
+
+
+
+
+[2020-12-04 21:00:22.978] [jointLog] [info] Automatically detected most likely library type as IU
+[A[32mprocessed[31m 500,000 [32mfragments[0m
+hits: 254,014, hits per frag:  0.551704[A[32mprocessed[31m 1,000,000 [32mfragments[0m
+hits: 499,169, hits per frag:  0.517949[A[32mprocessed[31m 1,500,000 [32mfragments[0m
+hits: 746,217, hits per frag:  0.504744[A[32mprocessed[31m 2,000,000 [32mfragments[0m
+hits: 994,628, hits per frag:  0.506914[A[32mprocessed[31m 2,500,000 [32mfragments[0m
+hits: 1,240,803, hits per frag:  0.502764[A[32mprocessed[31m 3,000,000 [32mfragments[0m
+hits: 1,492,807, hits per frag:  0.500412[A[32mprocessed[31m 3,500,000 [32mfragments[0m
+hits: 1,742,867, hits per frag:  0.502363[A[32mprocessed[31m 4,000,000 [32mfragments[0m
+hits: 1,994,376, hits per frag:  0.5002[A[32mprocessed[31m 4,500,000 [32mfragments[0m
+hits: 2,241,698, hits per frag:  0.502335
+
+
+
+
+
+
+
+[2020-12-04 21:10:24.602] [jointLog] [info] Computed 341,408 rich equivalence classes for further processing
+[2020-12-04 21:10:24.602] [jointLog] [info] Counted 1,054,318 total reads in the equivalence classes 
+[2020-12-04 21:10:24.614] [jointLog] [info] Number of orphans recovered using orphan rescue : 710,881
+[2020-12-04 21:10:24.614] [jointLog] [info] Number of mappings discarded because of alignment score : 30,769,751
+[2020-12-04 21:10:24.614] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 2,690,221
+[2020-12-04 21:10:24.614] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 952,348
+[2020-12-04 21:10:24.614] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 1,389,984
+[2020-12-04 21:10:25.880] [jointLog] [warning] Only 1054318 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-12-04 21:10:25.880] [jointLog] [info] Mapping rate = 22.012%
+
+[2020-12-04 21:10:25.880] [jointLog] [info] finished quantifyLibrary()
+[2020-12-04 21:10:25.961] [jointLog] [info] Starting optimizer
+[2020-12-04 21:10:29.610] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-12-04 21:10:29.992] [jointLog] [info] iteration = 0 | max rel diff. = 18.2229
+[2020-12-04 21:10:33.764] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-12-04 21:13:25.230] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-12-04 21:13:25.231] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-12-04 21:13:35.495] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-12-04 21:13:50.192] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-12-04 21:14:02.653] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-12-04 21:14:14.997] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-12-04 21:14:30.144] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-12-04 21:14:42.126] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-12-04 21:14:54.573] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-12-04 21:15:05.805] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-12-04 21:15:19.740] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-12-04 21:15:47.947] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 21:16:20.403] [jointLog] [info] iteration = 100 | max rel diff. = 6.41998
+[2020-12-04 21:16:58.118] [jointLog] [info] iteration = 200 | max rel diff. = 0.420761
+[2020-12-04 21:17:28.335] [jointLog] [info] iteration = 281 | max rel diff. = 0.0079179
+[2020-12-04 21:17:29.539] [jointLog] [info] Finished optimizer
+[2020-12-04 21:17:29.539] [jointLog] [info] writing output 
+
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./trimmomaticRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG exo
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
+trimmomatic: 0.39
++ echo 'read 1:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R1_001.fastq.gz
+read 1: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R1_001.fastq.gz
++ echo 'read 2:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R2_001.fastq.gz
+read 2: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R2_001.fastq.gz
++ echo 'Trimming fastq'
+Trimming fastq
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
++ trimmomatic PE -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_0-1AMG_3_S3_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 2429149 Both Surviving: 2319238 (95.48%) Forward Only Surviving: 62154 (2.56%) Reverse Only Surviving: 29585 (1.22%) Dropped: 18172 (0.75%)
+TrimmomaticPE: Completed successfully
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./salmonRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+cmd: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+salmon version: salmon 1.3.0
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
+output: rnaEASY.3D.3.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
++ [[ ! -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/quant.sf ]]
++ mkdir /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
++ '[' -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_single_end.fq.gz ']'
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
++ trim_fwd=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG
++ trim_rev=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
++ salmon quant -i /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 --libType A -1 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_paired.fq.gz -2 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz -p 8 --validateMappings --gcBias --seqBias --recoverOrphans --rangeFactorizationBins 4 --output /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+###
+### salmon (selective-alignment-based) v1.3.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 }
+### [ libType ] => { A }
+### [ mates1 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_paired.fq.gz }
+### [ mates2 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz }
+### [ threads ] => { 8 }
+### [ validateMappings ] => { }
+### [ gcBias ] => { }
+### [ seqBias ] => { }
+### [ recoverOrphans ] => { }
+### [ rangeFactorizationBins ] => { 4 }
+### [ output ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST }
+Logs will be written to /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/logs
+[2020-12-04 21:20:09.483] [jointLog] [info] setting maxHashResizeThreads to 8
+[2020-12-04 21:20:09.483] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-12-04 21:20:09.483] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-12-04 21:20:09.483] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-12-04 21:20:09.483] [jointLog] [info] parsing read library format
+[2020-12-04 21:20:09.483] [jointLog] [info] There is 1 library.
+[2020-12-04 21:20:09.560] [jointLog] [info] Loading pufferfish index
+[2020-12-04 21:20:09.560] [jointLog] [info] Loading dense pufferfish index.
+-----------------------------------------
+| Loading contig table | Time = 105.4 s
+-----------------------------------------
+size = 45236907
+-----------------------------------------
+| Loading contig offsets | Time = 143.18 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 23.065 ms
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.5015 s
+-----------------------------------------
+size = 4035132990
+Number of ones: 45236906
+Number of ones per inventory item: 512
+Inventory entries filled: 88354
+-----------------------------------------
+| Loading contig boundaries | Time = 15.965 s
+-----------------------------------------
+size = 4035132990
+-----------------------------------------
+| Loading sequence | Time = 777.83 ms
+-----------------------------------------
+size = 2678025810
+-----------------------------------------
+| Loading positions | Time = 11.174 s
+-----------------------------------------
+size = 4989818310
+-----------------------------------------
+| Loading reference sequence | Time = 1.3183 s
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 56.014 ms
+-----------------------------------------
+[2020-12-04 21:22:25.950] [jointLog] [info] done
+[2020-12-04 21:22:25.950] [jointLog] [info] Index contained 5,386,122 targets
+[2020-12-04 21:23:08.655] [jointLog] [info] Number of decoys : 183
+[2020-12-04 21:23:08.655] [jointLog] [info] First decoy index : 5,187,435 
+
+
+
+
+[2020-12-04 21:23:29.499] [jointLog] [info] Automatically detected most likely library type as IU
+[A[32mprocessed[31m 500,000 [32mfragments[0m
+hits: 169,769, hits per frag:  0.344134[A[32mprocessed[31m 1,000,000 [32mfragments[0m
+hits: 335,376, hits per frag:  0.346478[A[32mprocessed[31m 1,500,000 [32mfragments[0m
+hits: 504,985, hits per frag:  0.341715[A[32mprocessed[31m 2,000,000 [32mfragments[0m
+hits: 674,241, hits per frag:  0.337802
+
+
+
+
+
+
+
+[2020-12-04 21:27:05.060] [jointLog] [info] Computed 129,814 rich equivalence classes for further processing
+[2020-12-04 21:27:05.060] [jointLog] [info] Counted 588,742 total reads in the equivalence classes 
+[2020-12-04 21:27:05.065] [jointLog] [info] Number of orphans recovered using orphan rescue : 333,087
+[2020-12-04 21:27:05.065] [jointLog] [info] Number of mappings discarded because of alignment score : 14,232,435
+[2020-12-04 21:27:05.065] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 1,257,087
+[2020-12-04 21:27:05.065] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 345,439
+[2020-12-04 21:27:05.065] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 829,023
+[2020-12-04 21:27:07.313] [jointLog] [warning] Only 588742 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-12-04 21:27:07.313] [jointLog] [info] Mapping rate = 25.3851%
+
+[2020-12-04 21:27:07.313] [jointLog] [info] finished quantifyLibrary()
+[2020-12-04 21:27:07.372] [jointLog] [info] Starting optimizer
+[2020-12-04 21:27:11.688] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-12-04 21:27:12.056] [jointLog] [info] iteration = 0 | max rel diff. = 10.1291
+[2020-12-04 21:27:15.733] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-12-04 21:28:37.976] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-12-04 21:28:37.976] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-12-04 21:28:43.630] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-12-04 21:28:50.212] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-12-04 21:28:56.698] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-12-04 21:29:04.849] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-12-04 21:29:09.575] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-12-04 21:29:16.190] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-12-04 21:29:24.472] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-12-04 21:29:33.159] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-12-04 21:29:40.338] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-12-04 21:29:48.857] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 21:30:23.340] [jointLog] [info] iteration = 100 | max rel diff. = 0.0318071
+[2020-12-04 21:30:56.103] [jointLog] [info] iteration = 187 | max rel diff. = 0.00451178
+[2020-12-04 21:30:57.927] [jointLog] [info] Finished optimizer
+[2020-12-04 21:30:57.927] [jointLog] [info] writing output 
+
+[2020-12-04 21:31:14.050] [jointLog] [warning] NOTE: Read Lib [[ /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_forward_paired.fq.gz, /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.AMG/rnaEASY.3D.3.AMG_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/lib_format_counts.json for details
+
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./trimmomaticRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO exo
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
+trimmomatic: 0.39
++ echo 'read 1:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R1_001.fastq.gz
+read 1: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R1_001.fastq.gz
++ echo 'read 2:' /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R2_001.fastq.gz
+read 2: /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R2_001.fastq.gz
++ echo 'Trimming fastq'
+Trimming fastq
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
++ trimmomatic PE -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -threads 8 /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R1_001.fastq.gz /public/groups/kimlab/seqData/2020-12-30_h358_exotic_amg/12012020_H358exo_Sree//ExoRNAeasy_3D_DMSO_3_S6_R2_001.fastq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz ILLUMINACLIP:/public/groups/kimlab/genomes.annotations/adapters/NexteraPE-PE.fa:1:30:10:4:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 3438676 Both Surviving: 3068363 (89.23%) Forward Only Surviving: 191100 (5.56%) Reverse Only Surviving: 85350 (2.48%) Dropped: 93863 (2.73%)
+TrimmomaticPE: Completed successfully
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ ./salmonRun.sh /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+cmd: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 2020-12-04-20.06.44-PST
+salmon version: salmon 1.3.0
+input: /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
+output: rnaEASY.3D.3.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
++ [[ ! -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/quant.sf ]]
++ mkdir /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
++ '[' -f /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_single_end.fq.gz ']'
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
++ trim_fwd=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+++ basename /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO
++ trim_rev=/public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
++ salmon quant -i /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 --libType A -1 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz -2 /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz -p 8 --validateMappings --gcBias --seqBias --recoverOrphans --rangeFactorizationBins 4 --output /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+###
+### salmon (selective-alignment-based) v1.3.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { /public/groups/kimlab/indexes/sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1 }
+### [ libType ] => { A }
+### [ mates1 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz }
+### [ mates2 ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz }
+### [ threads ] => { 8 }
+### [ validateMappings ] => { }
+### [ gcBias ] => { }
+### [ seqBias ] => { }
+### [ recoverOrphans ] => { }
+### [ rangeFactorizationBins ] => { 4 }
+### [ output ] => { /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST }
+Logs will be written to /public/groups/kimlab/exosome-KRAS-inhib/data/rnaEASY.3D/rnaEASY.3D.3.DMSO/rnaEASY.3D.3.DMSO_sel.aln.gen.34.ucsc.rmsk.index.salmon.1.2.1_2020-12-04-20.06.44-PST/logs
+[2020-12-04 21:34:35.833] [jointLog] [info] setting maxHashResizeThreads to 8
+[2020-12-04 21:34:35.833] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-12-04 21:34:35.833] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-12-04 21:34:35.833] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-12-04 21:34:35.833] [jointLog] [info] parsing read library format
+[2020-12-04 21:34:35.833] [jointLog] [info] There is 1 library.
+[2020-12-04 21:34:35.917] [jointLog] [info] Loading pufferfish index
+[2020-12-04 21:34:35.918] [jointLog] [info] Loading dense pufferfish index.
+-----------------------------------------
+| Loading contig table | Time = 104.43 s
+-----------------------------------------
+size = 45236907
+-----------------------------------------
+| Loading contig offsets | Time = 225.16 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 29.753 ms
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 2.0751 s
+-----------------------------------------
+size = 4035132990
+Number of ones: 45236906
+Number of ones per inventory item: 512
+Inventory entries filled: 88354
+-----------------------------------------
+| Loading contig boundaries | Time = 16.224 s
+-----------------------------------------
+size = 4035132990
+-----------------------------------------
+| Loading sequence | Time = 1.1384 s
+-----------------------------------------
+size = 2678025810
+-----------------------------------------
+| Loading positions | Time = 10.049 s
+-----------------------------------------
+size = 4989818310
+-----------------------------------------
+| Loading reference sequence | Time = 853.36 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 38.653 ms
+-----------------------------------------
+[2020-12-04 21:36:51.013] [jointLog] [info] done
+[2020-12-04 21:36:51.013] [jointLog] [info] Index contained 5,386,122 targets
+[2020-12-04 21:37:34.523] [jointLog] [info] Number of decoys : 183
+[2020-12-04 21:37:34.523] [jointLog] [info] First decoy index : 5,187,435 
+
+
+
+
+[2020-12-04 21:37:45.404] [jointLog] [info] Automatically detected most likely library type as IU
+[A[32mprocessed[31m 500,001 [32mfragments[0m
+hits: 481,001, hits per frag:  1.02152[A[32mprocessed[31m 1,000,000 [32mfragments[0m
+hits: 950,748, hits per frag:  0.979318[A[32mprocessed[31m 1,500,000 [32mfragments[0m
+hits: 1,427,308, hits per frag:  0.970514[A[32mprocessed[31m 2,000,000 [32mfragments[0m
+hits: 1,906,155, hits per frag:  0.969843[A[32mprocessed[31m 2,500,000 [32mfragments[0m
+hits: 2,384,937, hits per frag:  0.958271[A[32mprocessed[31m 3,000,000 [32mfragments[0m
+hits: 2,855,482, hits per frag:  0.962567
+
+
+
+
+
+
+
+[2020-12-04 21:42:46.972] [jointLog] [info] Computed 165,699 rich equivalence classes for further processing
+[2020-12-04 21:42:46.972] [jointLog] [info] Counted 1,012,619 total reads in the equivalence classes 
+[2020-12-04 21:42:46.982] [jointLog] [info] Number of orphans recovered using orphan rescue : 479,228
+[2020-12-04 21:42:46.982] [jointLog] [info] Number of mappings discarded because of alignment score : 17,239,884
+[2020-12-04 21:42:46.982] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 1,476,950
+[2020-12-04 21:42:46.982] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 443,345
+[2020-12-04 21:42:46.982] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 866,569
+[2020-12-04 21:42:49.221] [jointLog] [warning] Only 1012619 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-12-04 21:42:49.221] [jointLog] [info] Mapping rate = 33.0019%
+
+[2020-12-04 21:42:49.221] [jointLog] [info] finished quantifyLibrary()
+[2020-12-04 21:42:49.245] [jointLog] [info] Starting optimizer
+[2020-12-04 21:42:53.530] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-12-04 21:42:53.893] [jointLog] [info] iteration = 0 | max rel diff. = 17.4177
+[2020-12-04 21:42:57.527] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-12-04 21:44:50.394] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-12-04 21:44:50.396] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-12-04 21:44:54.227] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-12-04 21:45:00.167] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-12-04 21:45:05.014] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-12-04 21:45:09.475] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-12-04 21:45:15.025] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-12-04 21:45:22.873] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-12-04 21:45:33.627] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-12-04 21:45:39.727] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-12-04 21:45:47.531] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-12-04 21:46:13.996] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-12-04 21:46:47.644] [jointLog] [info] iteration = 100 | max rel diff. = 13.2755
+[2020-12-04 21:47:24.847] [jointLog] [info] iteration = 200 | max rel diff. = 9.21746
+[2020-12-04 21:48:01.746] [jointLog] [info] iteration = 300 | max rel diff. = 0.163927
+[2020-12-04 21:48:38.798] [jointLog] [info] iteration = 400 | max rel diff. = 0.0463282
+[2020-12-04 21:49:15.794] [jointLog] [info] iteration = 500 | max rel diff. = 0.0439377
+[2020-12-04 21:49:52.635] [jointLog] [info] iteration = 600 | max rel diff. = 0.153633
+[2020-12-04 21:49:57.884] [jointLog] [info] iteration = 615 | max rel diff. = 0.000723545
+[2020-12-04 21:49:59.721] [jointLog] [info] Finished optimizer
+[2020-12-04 21:49:59.721] [jointLog] [info] writing output 
+
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x
++ exitStatus=0
++ '[' 0 -ne 0 ']'
++ set +x

@@ -1,0 +1,2028 @@
+cmd: fastqQualityCheck.sh /public/groups/kimlab/exosome-KRAS-inhib/data /public/groups/kimlab/exosome-KRAS-inhib/qc 2
+Started analysis of exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Started analysis of exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Started analysis of exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Started analysis of exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Started analysis of exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Started analysis of exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Started analysis of exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Started analysis of exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Started analysis of exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Started analysis of exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Started analysis of exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Started analysis of exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 10% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 65% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.2D.2.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Analysis complete for exoTIC.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Started analysis of exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 65% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 65% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.2D.2.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Started analysis of exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.2D.3.DMSO_output_forward_unpaired.fq.gz
+Started analysis of exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.2D.1.AMG_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Started analysis of exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 10% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Analysis complete for exoTIC.2D.1.DMSO_output_forward_paired.fq.gz
+Analysis complete for exoTIC.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Started analysis of exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Analysis complete for exoTIC.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Analysis complete for exoTIC.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.3D.1.AMG_output_forward_paired.fq.gz
+Approx 10% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.3D.2.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Analysis complete for exoTIC.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Analysis complete for exoTIC.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 10% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Analysis complete for exoTIC.3D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 100% complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Analysis complete for exoTIC.2D.3.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.3D.3.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Started analysis of exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 5% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for exoTIC.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Started analysis of rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Analysis complete for exoTIC.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.2D.1.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 35% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 30% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 40% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Analysis complete for exoTIC.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 60% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 65% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 50% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.2D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 75% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for exoTIC.3D.3.AMG_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 85% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 95% complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Analysis complete for exoTIC.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.2.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.2D.1.AMG_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for exoTIC.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.2.DMSO_output_forward_unpaired.fq.gz
+Started analysis of rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.2D.1.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Started analysis of rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.2D.3.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.2D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.2D.1.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.2D.2.AMG_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.2D.2.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.1.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.2D.3.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.3.AMG_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.1.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.1.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.2D.3.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.2D.3.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.2.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Started analysis of rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.1.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 95% complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Started analysis of rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.2D.2.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.3D.2.AMG_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.2.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.1.AMG_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.2.DMSO_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.2.DMSO_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.3D.1.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.3D.3.AMG_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.3D.1.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.3.AMG_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.3D.1.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Started analysis of rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.3.AMG_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.3D.3.DMSO_output_forward_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.3D.2.AMG_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Started analysis of rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 5% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Analysis complete for rnaEASY.3D.2.AMG_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.3D.3.DMSO_output_reverse_unpaired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 10% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 15% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.3D.3.AMG_output_reverse_paired.fq.gz
+Approx 20% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 25% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 30% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 35% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 40% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 45% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 50% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Analysis complete for rnaEASY.3D.2.DMSO_output_forward_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 55% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 60% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.3D.2.DMSO_output_reverse_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 65% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 70% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 75% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 80% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 85% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.3D.3.DMSO_output_forward_paired.fq.gz
+Approx 90% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Approx 95% complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+Analysis complete for rnaEASY.3D.3.DMSO_output_reverse_paired.fq.gz
+[INFO   ]         multiqc : This is MultiQC v1.9
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching   : /public/groups/kimlab/exosome-KRAS-inhib/data
+[INFO   ]          salmon : Found 24 meta reports
+[INFO   ]          salmon : Found 24 fragment length distributions
+[INFO   ]          fastqc : Found 96 reports
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : ../qc/multiqc..2020-12-05-19.37.20-PST.html
+[INFO   ]         multiqc : Data        : ../qc/multiqc..2020-12-05-19.37.20-PST_data
+[INFO   ]         multiqc : MultiQC complete
