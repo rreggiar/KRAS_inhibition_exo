@@ -10,14 +10,13 @@
 
 ## Goals
 
-    1. Compare performance between exosome isolation approaches in both 2D and
-       3D contexts
-    2. Identify differentially expressed genes between 2D/3D and AMG/DMSO
-    3. Assess global transcritpome representation in all contexts
+1. Compare performance between exosome isolation approaches in both 2D and 3D contexts
+2. Identify differentially expressed genes between 2D/3D and AMG/DMSO
+3. Assess global transcritpome representation in all contexts
 
 ## To-Do
 
-    [ ] Differential Expression
-    [ ] Clustering
+- [ ] Differential Expression
+- [ ] Clustering
 
 
