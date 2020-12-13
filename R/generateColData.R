@@ -48,7 +48,7 @@ parse.input <- function(data.path, output.name){
 
     		x.path <- Sys.glob(file.path(x,paste0("*v35.",output.name,"*"), "quant.sf"))[1]
     		x <- basename(x)
-            sample.split <- str_split(x, '[.]', n=3)[[1]]
+            sample.split <- str_split(x, '[.]', n=4)[[1]]
             platform <- sample.split[1]
             context <- sample.split[2]
             rep <- sample.split[3]
