@@ -40,7 +40,7 @@ parse.input <- function(data.path, output.name){
     						  'names' = character(),
                               'condition' = character(),
                               'rep' = numeric(), 
-                              'input_vol' = numeric())
+                              'platform' = character())
 
     # iteratively add to the empyty df the parsed sample names
     # here with format 'condition.rep'
@@ -49,31 +49,23 @@ parse.input <- function(data.path, output.name){
     		x.path <- Sys.glob(file.path(x,paste0("*v35.",output.name,"*"), "quant.sf"))[1]
     		x <- basename(x)
             sample.split <- str_split(x, '[.]', n=3)[[1]]
-            condition <- sample.split[1]
-            rep <- sample.split[2]
-            input.vol <- sample.split[3]
+            platform <- sample.split[1]
+            context <- sample.split[2]
+            rep <- sample.split[3]
+            condition <- sample.split[4]
             temp.df <- data.frame('files' = x.path,
             					  'names' = x,
                                   'condition' = condition,
                                   'rep' = rep,
-                                  'input_vol' = input.vol)
+                                  'platform' = platform)
             sample.info <<- rbind(sample.info, temp.df)
     })
-
-    # convert to data frame
-    # merge in the rest of the metadata
-    duplicates <- c('panc.10.2.5', 'panc.6.2.5', 'panc.7.2.5', 'panc.9.2.5')#,
-    #                 'ctrl.3.2.5', 'ctrl.2.3.4', 'ctrl.1.3.0', 'ctrl.1.5.0',
-    #                 'ctrl.1.2.0', 'ctrl.1.1.5' , 'ctrl.1.0.5')
 
     head(sample.info)
 
     sample.info.df <<- 
         sample.info %>%
         bind_rows() %>%
-        filter(! names %in% duplicates,
-    		   condition != 'luad') %>%
-    		   # ! grepl('intra', input_vol)) %>%
         filter(! is.na(files)) %>%
         mutate(condition = relevel(as.factor(condition), ref = 'ctrl'))
 
@@ -87,6 +79,10 @@ txome.path <- paths.in[2]
 output.name <- paths.in[3]
 txome.tsv <- paths.in[4]
 
+
+outpath <- file.path("/public/groups/kimlab/exosome-KRAS-inhib/output.data")
+
+
 print('parse input dir')
 parse.input(data.path, output.name)
 
@@ -98,13 +94,12 @@ tx.to.gene <- read_csv('/public/groups/kimlab/genomes.annotations/gencode.35/gen
 
 if (output.name == 'ucsc.rmsk.salmon'){
 	metaSkip = TRUE
-	# print('import data with tximeta')
-	# txi <- tximeta::tximeta(coldata = sample.info.df, type = 'salmon', skipMeta=metaSkip)
+	print('import data with tximeta')
+	txi <- tximeta::tximeta(coldata = sample.info.df, type = 'salmon', skipMeta=metaSkip)
 
-	outpath <- file.path("/public/groups/kimlab/exoRNA-biomarkers-panc/output.data/")
 
-	# print('save tx h5')
-	# saveHDF5SummarizedExperiment(txi, dir=paste0(outpath,paste0(output.name, '_h5_se')) , replace=TRUE)
+	print('save tx h5')
+	saveHDF5SummarizedExperiment(txi, dir=paste0(outpath,paste0(output.name, '_h5_se')) , replace=TRUE)
 
 	gxi <- tximeta::tximeta(coldata = sample.info.df, 
 		type = 'salmon', 
@@ -120,8 +115,6 @@ if (output.name == 'ucsc.rmsk.salmon'){
 	metaSkip = FALSE
 	print('import data with tximeta')
 	txi <- tximeta::tximeta(coldata = sample.info.df, type = 'salmon', skipMeta=metaSkip)
-
-	outpath <- file.path("/public/groups/kimlab/exoRNA-biomarkers-panc/output.data/")
 
 	print('save tx h5')
 	saveHDF5SummarizedExperiment(txi, dir=paste0(outpath,paste0(output.name, '_h5_se')) , replace=TRUE)
