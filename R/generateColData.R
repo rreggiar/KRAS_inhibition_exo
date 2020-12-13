@@ -80,7 +80,7 @@ output.name <- paths.in[3]
 txome.tsv <- paths.in[4]
 
 
-outpath <- file.path("/public/groups/kimlab/exosome-KRAS-inhib/output.data")
+outpath <- file.path("/public/groups/kimlab/exosome-KRAS-inhib/output.data/")
 
 
 print('parse input dir')
