@@ -65,9 +65,9 @@ parse.input <- function(data.path, output.name){
 
     sample.info.df <<- 
         sample.info %>%
-        bind_rows() %>%
-        filter(! is.na(files)) %>%
-        mutate(condition = relevel(as.factor(condition), ref = 'ctrl'))
+        bind_rows() #%>%
+        # filter(! is.na(files)) %>%
+        # mutate(condition = relevel(as.factor(condition), ref = 'ctrl'))
 
     print(sample.info.df)
 }
