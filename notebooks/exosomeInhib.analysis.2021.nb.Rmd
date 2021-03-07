@@ -16,7 +16,7 @@ print(here())
 
 # setup:
 ## loading
-```{r}
+```{r loading}
 suppressPackageStartupMessages({
   library(tidyverse)
   library(here)
@@ -26,6 +26,7 @@ suppressPackageStartupMessages({
   library(ggthemes) 
   library(ggrepel)
   library(ggforce)
+  library(patchwork)
   library(extrafont)
   library(ggrepel)
   library(pheatmap)
@@ -52,8 +53,8 @@ suppressPackageStartupMessages({
 suppressMessages(loadfonts())
 ```
 ## setting ggplot theme
-```{r}
-theme_set(theme_foundation(base_size = 7,
+```{r setting ggplot theme}
+theme_set(theme_foundation(base_size = 8,
                            base_family = 'Helvetica') + 
             theme(plot.title = element_blank(),
                 panel.background = element_rect(colour = NA),
@@ -64,7 +65,7 @@ theme_set(theme_foundation(base_size = 7,
                 axis.title.x = element_text(vjust = -0.2),
                 axis.text = element_text(size = rel(1)), 
                 axis.line = element_blank(),
-                strip.text = element_text(size = rel(1)),
+                strip.text = element_text(size = 6),
                 strip.background = element_blank(),
                 legend.key.size= unit(0.08, "in"),
                 legend.spacing = unit(0, "in"),
@@ -87,7 +88,7 @@ theme_set(theme_foundation(base_size = 7,
           ))
 
 theme_set_fun <- function(){
-  theme_set(theme_foundation(base_size = 7,
+  theme_set(theme_foundation(base_size = 8,
                            base_family = 'Helvetica') + 
             theme(plot.title = element_blank(),
                 panel.background = element_rect(colour = NA),
@@ -98,7 +99,7 @@ theme_set_fun <- function(){
                 axis.title.x = element_text(vjust = -0.2),
                 axis.text = element_text(size = rel(1)), 
                 axis.line = element_blank(),
-                strip.text = element_text(size = rel(1)),
+                strip.text = element_text(size = 6),
                 strip.background = element_blank(),
                 legend.key.size= unit(0.08, "in"),
                 legend.spacing = unit(0, "in"),
@@ -121,7 +122,7 @@ theme_set_fun <- function(){
 }
 ```
 ## figure dirs, and other globally relevant constants
-```{r}
+```{r system I/O constants}
 figure.dir <-  here('figures')
 data.dir <-  here('data')
 output.data.dir <- here('output.data')
@@ -137,24 +138,26 @@ chr.order <- c('chr1', 'chr2', 'chr3',
                'chr21', 'chr22', 'chrX', 'chrY')
 ```
 ## saving panels
-```{r}
-panel.figure.width = 89
-panel.figure.height = 247/3
+```{r saving panel}
+panel.figure.width = 8.7
+panel.figure.height = 22.5
 
 panel.save <- function(figure, name, width = 'single', height = 'single'){
   
   if (width == 'single'){
     panel.width = panel.figure.width
+  } else if (width == 'medium'){
+    panel.width = panel.figure.width*1.5
   } else{
     panel.width = panel.figure.width*2
   }
   
   if (height == 'single'){
-    panel.height = panel.figure.height
-  } else if (height == 'half'){
+    panel.height = panel.figure.height/3
+  } else if (height == 'double'){
     panel.height = panel.figure.height/2
   } else{
-    panel.height = panel.figure.height*3
+    panel.height = panel.figure.height
   }
   
   ggsave(paste0(figure.dir, 
@@ -169,7 +172,7 @@ panel.save <- function(figure, name, width = 'single', height = 'single'){
                 '.pdf'),
        width = panel.width, 
        height = panel.height, 
-       units = 'mm')
+       units = 'cm')
 }
 
 save_pheatmap_pdf <- function(x, filename, width=5, height=3) {
@@ -182,7 +185,7 @@ save_pheatmap_pdf <- function(x, filename, width=5, height=3) {
 }
 ```
 ## gene sets for filtering, identification
-```{r}
+```{r gene set I/O}
 ## sex linked genes to help clustering
 gencode.sex.linked.genes <- 
   read_tsv(file.path(output.data.dir, 'reference.data/sex.linked.gene.list.tsv'),
@@ -352,100 +355,54 @@ process.aware.salmon.quant$rnaEasy_3D <- subset.tximeta.object(process.aware.sal
 ```
 ### CALL: build nanosight
 ```{r}
-## dilution factor == 200
 
 read_csv(file.path(output.data.dir, 'exoTIC_3D_nano.csv')) %>%  
-  #this appears to have one extra, low value size row
-  cbind(head(read_csv(file.path(output.data.dir, 'exoTIC_2D_nano.csv')), -1) %>% 
-          select(-size)) %>% 
-    cbind(read_csv(file.path(output.data.dir, 'rnaEasy_2D_nano.csv')) %>% 
-            select(-size)) %>% 
     gather(sample, value, -size) %>% 
     mutate(condition = sample) %>% 
-    separate(condition, sep = '_', into = c('context', 'platform', 'condition')) -> nanosight.df
+    separate(condition, sep = '_', into = c('context', 'platform', 'condition')) %>% 
+    group_by(size, condition) %>%
+    mutate(mean = (mean(value))/1e6,
+         sd = (sd(value))/1e6) -> exoTIC.3D.nanosight.df
 
+head(read_csv(file.path(output.data.dir, 'exoTIC_2D_nano.csv')), -1) %>% 
+    gather(sample, value, -size) %>% 
+    mutate(condition = sample) %>% 
+    separate(condition, sep = '_', into = c('context', 'platform', 'condition')) %>% 
+    group_by(size, condition) %>%
+    mutate(mean = (mean(value))/1e6,
+         sd = (sd(value))/1e6) %>% 
+  drop_na() -> exoTIC.2D.nanosight.df
 
-nanosight.df %>% 
-  filter(sample == '2d_rnaEasy_NA_DMSO') %>% 
-  group_by(sample) %>% 
-  mutate(weight = sum(size*value)/sum(value)) %>% 
-  top_n(1, weight) %>% 
-  select(-size, -value) %>% filter(sample == '2d_rnaEasy_NA_DMSO')
-distinct() %>% 
-  filter(!condition %in% c('0.05', '0.01')) %>% 
-  ungroup() %>% 
-  mutate(condition = ifelse(condition == '0.1', 'amg', condition),
-         context = toupper(context), toupper(condition), 
-         platform = ifelse(platform == 'exotic', 'exoTIC', 'rnaEASY'))
-
-
-read_csv(file.path(output.data.dir, 'exoTIC_3D_nano.csv')) %>% 
+read_csv(file.path(output.data.dir, 'rnaEasy_AMG_nano.csv')) %>% 
   gather(sample, value, -size) %>% 
   mutate(condition = sample) %>% 
-  separate(condition, sep = '_', into = c(NA, NA, 'condition', NA)) %>% 
-  group_by(size, condition) %>%
-  mutate(mean = (mean(value) * 200)/1e8,
-         sd = (sd(value) * 200)/1e8) %>% 
-  ggplot(aes(size, y = mean, ymin = mean - sd, 
-             ymax = mean + sd, group = condition, 
-             fill = condition, color = condition)) + 
-  geom_ribbon(alpha = 0.25, linetype = 'dotted') + 
-  geom_line(size = (rel(1))) +
-  # geom_vline(xintercept = seq(0,400,50), linetype = 'dashed', alpha = 0.15) + 
-  # scale_x_continuous(limits = c(0, 400), breaks = c(0,50,100,150,200,250,300,350,400)) + 
-  scale_color_manual('condition', values = c(viridis(3)[1], viridis(3)[2])) +
-  scale_fill_manual('condition', values = c(viridis(3)[1], viridis(3)[2]), guide = F) + 
-  stat_peaks(size = (rel(2))) + 
-  ylab('10 million particles per mL') +
-  xlab('size (nm)') +
-  xlim(0, 350) #+
-  # geom_vline(xintercept = 179.5) +
-  # geom_segment(x = 30, xend = 150, y = 120, yend = 120)
+  separate(condition, sep = '_', into = c('context', 'platform', 'dose', 'condition')) %>% 
+  mutate(value = value/1e6) %>% 
+  drop_na() -> rnaEasy.amg.nanosight.df
 
-read_csv(file.path(output.data.dir, 'exoTIC_2D_nano.csv')) %>% 
-  gather(sample, value, -size) %>% 
+read_csv(file.path(output.data.dir, 'rnaEasy_DMSO_nano.csv')) %>% 
+  select(-X2) %>% 
+  gather(sample, value, -size) %>%
   mutate(condition = sample) %>% 
-  separate(condition, sep = '_', into = c(NA, NA, 'condition', NA)) %>% 
-  group_by(size, condition) %>%
-  mutate(mean = (mean(value) * 200)/1e8,
-         sd = (sd(value) * 200)/1e8) %>% 
-  ggplot(aes(size, y = mean, ymin = mean - sd, 
-             ymax = mean + sd, group = condition, 
-             fill = condition, color = condition)) + 
-  geom_ribbon(alpha = 0.25, linetype = 'dotted') + 
-  geom_line(size = (rel(1))) +
-  # geom_vline(xintercept = seq(0,400,50), linetype = 'dashed', alpha = 0.15) + 
-  # scale_x_continuous(limits = c(0, 400), breaks = c(0,50,100,150,200,250,300,350,400)) + 
-  scale_color_manual('condition', values = c(viridis(3)[1], viridis(3)[2])) +
-  scale_fill_manual('condition', values = c(viridis(3)[1], viridis(3)[2]), guide = F) + 
-  stat_peaks(size = (rel(2))) + 
-  ylab('10 million particles per mL') +
-  xlab('size (nm)') +
-  xlim(0, 350) + 
-  geom_vline(xintercept = c(258.00, 219.50, 242.80, 247.70)) +
-  geom_segment(x = 30, xend = 150, y = 160, yend = 160)
+  separate(condition, sep = '_', into = c('context', 'platform', 'condition', NA)) %>% 
+  group_by(size, context) %>%
+  mutate(mean = (mean(value))/1e6,
+         sd = (sd(value))/1e6) -> rnaEasy.dmso.nanosight.df
+
+# nanosight.df %>% 
+#   filter(sample == '2d_rnaEasy_NA_DMSO') %>% 
+#   group_by(sample) %>% 
+#   mutate(weight = sum(size*value)/sum(value)) %>% 
+#   top_n(1, weight) #%>% 
+#   select(-size, -value) #%>% filter(sample == '2d_rnaEasy_NA_DMSO')
+# distinct() %>% 
+#   filter(!condition %in% c('0.05', '0.01')) %>% 
+#   ungroup() %>% 
+#   mutate(condition = ifelse(condition == '0.1', 'amg', condition),
+#          context = toupper(context), toupper(condition), 
+#          platform = ifelse(platform == 'exotic', 'exoTIC', 'rnaEASY'))
 
 
-read_csv(file.path(output.data.dir, 'rnaEasy_2D_nano.csv')) %>% 
-  gather(sample, value, -size) %>% 
-  mutate(condition = sample) %>% 
-  separate(condition, sep = '_', into = c(NA, NA, 'condition', NA)) %>% 
-  group_by(size, condition) %>%
-  mutate(mean = (mean(value) * 200)/1e8,
-         sd = (sd(value) * 200)/1e8) %>% 
-  ggplot(aes(size, y = mean, ymin = mean - sd, 
-             ymax = mean + sd, group = condition, 
-             fill = condition, color = condition)) + 
-  geom_ribbon(alpha = 0.25, linetype = 'dotted') + 
-  geom_line(size = (rel(1))) +
-  # geom_vline(xintercept = seq(0,400,50), linetype = 'dashed', alpha = 0.15) + 
-  # scale_x_continuous(limits = c(0, 400), breaks = c(0,50,100,150,200,250,300,350,400)) + 
-  # scale_color_manual('condition', values = c(viridis(3)[1], viridis(3)[2])) +
-  # scale_fill_manual('condition', values = c(viridis(3)[1], viridis(3)[2]), guide = F) + 
-  stat_peaks(size = (rel(2))) + 
-  ylab('10 million particles per mL') +
-  xlab('size (nm)') +
-  xlim(0, 450) 
 
 ```
 ## metadata
@@ -501,7 +458,6 @@ unsplice.df %>%
 ```
 ### CALL: combat.batch effect
 ```{r}
-
 metadata.df %>% mutate_if(is.character, as.factor)-> pheno
 
 model.matrix(~as.factor(batch), data = pheno) -> mod
@@ -742,7 +698,7 @@ make.fgsea.ranks <- function(de.seq){
   # using shrunken log2 Fold Change values from DESeqII
   de.seq <- 
     de.seq %>%
-    mutate(rank = as.double(-log2FoldChange),
+    mutate(rank = as.double(log2FoldChange),
            Gene = as.character(gene)) %>% 
     select(Gene, rank) %>%
     mutate(rank = scale(rank)) 
@@ -1811,6 +1767,89 @@ ggplot(rna.editing.summary,
   scale_x_discrete(expand = c(0,0.5)) + 
   scale_y_continuous(limits = c(0,2), breaks = c(0,0.25,0.3,0.35,0.4,0.45,0.5,1,1.5,2))
 ```
+
+### Nanosight profiles
+```{r}
+
+exoTIC.3D.nanosight.df %>%
+  ggplot(aes(size, y = mean, ymin = mean - sd, 
+             ymax = mean + sd, group = condition, 
+             fill = condition, color = condition)) + 
+  geom_ribbon(alpha = 0.25, linetype = 'dotted') + 
+  geom_line(size = (rel(1))) +
+  geom_vline(xintercept = seq(0,350,50), linetype = 'dashed', alpha = 0.15) +
+  scale_x_continuous(limits = c(0, 350), breaks = c(0,50,100,150,200,250,300,350)) +
+  scale_color_manual('condition', values = c(viridis(3)[1], viridis(3)[2])) +
+  scale_fill_manual('condition', values = c(viridis(3)[1], viridis(3)[2]), guide = F) + 
+  stat_peaks(size = (rel(4))) + 
+  stat_peaks(geom='text', vjust = -2, ignore_threshold = 0.45, size = rel(4)) +
+  ylab('million particles per mL') +
+  xlab('size (nm)') +
+  # ylim(0, 80) +
+  ggtitle('exoTIC 3D') +
+  geom_segment(x = 30, xend = 150, y = 60, yend = 60, color = 'black') -> exoTIC.3D.nanosight.plt
+
+exoTIC.2D.nanosight.df %>%
+  ggplot(aes(size, y = mean, ymin = mean - sd, 
+             ymax = mean + sd, group = condition, 
+             fill = condition, color = condition)) + 
+  geom_ribbon(alpha = 0.25, linetype = 'dotted') + 
+  geom_line(size = (rel(1))) +
+  geom_vline(xintercept = seq(0,350,50), linetype = 'dashed', alpha = 0.15) +
+  scale_x_continuous(limits = c(0, 350), breaks = c(0,50,100,150,200,250,300,350)) +
+  scale_color_manual('condition', values = c(viridis(3)[1], viridis(3)[2])) +
+  scale_fill_manual('condition', values = c(viridis(3)[1], viridis(3)[2]), guide = F) + 
+  stat_peaks(size = (rel(4))) +
+  stat_peaks(geom='text', vjust = -2, ignore_threshold = 0.45, size = rel(4)) +
+  ylab('million particles per mL') +
+  xlab('size (nm)') +
+  # ylim(0, 80) +
+  ggtitle('exoTIC 2D') +
+  geom_segment(x = 30, xend = 150, y = 80, yend = 80, color = 'black') -> exoTIC.2D.nanosight.plt
+
+
+
+rnaEasy.amg.nanosight.df %>%
+  ggplot(aes(size, y = value, group = dose, 
+             fill = dose, color = dose)) + 
+  geom_line(size = (rel(1))) +
+  geom_vline(xintercept = seq(0,350,50), linetype = 'dashed', alpha = 0.15) +
+  scale_x_continuous(limits = c(0, 350), breaks = c(0,50,100,150,200,250,300,350)) +
+  scale_color_viridis_d() +
+  scale_fill_viridis_d(guide = F) + 
+  stat_peaks(size = (rel(4))) + 
+  stat_peaks(geom='text', vjust = -2, ignore_threshold = 0.45, size = rel(4)) +
+  ylab('million particles per mL') +
+  xlab('size (nm)') +
+  # ylim(0, 80) +
+  geom_segment(x = 30, xend = 150, y = 850, yend = 850, color = 'black') -> rnaEasy.amg.nanosight.plt
+
+
+rnaEasy.dmso.nanosight.df %>%
+  ggplot(aes(size, y = mean, ymin = mean - sd, 
+             ymax = mean + sd, group = context, 
+             fill = context, color = context)) + 
+  geom_ribbon(alpha = 0.25, linetype = 'dotted') + 
+  geom_line(size = (rel(1))) +
+  geom_vline(xintercept = seq(0,350,50), linetype = 'dashed', alpha = 0.15) +
+  scale_x_continuous(limits = c(0, 350), breaks = c(0,50,100,150,200,250,300,350)) +
+  scale_color_manual('condition', values = c(viridis(3)[1], viridis(3)[2])) +
+  scale_fill_manual('condition', values = c(viridis(3)[1], viridis(3)[2]), guide = F) +
+  stat_peaks(size = (rel(4))) + 
+  stat_peaks(geom='text', vjust = -2, ignore_threshold = 0.45, size = rel(4)) +
+  ylab('million particles per mL') +
+  xlab('size (nm)') +
+  geom_segment(x = 30, xend = 150, y = 1500, yend = 1500, color = 'black') -> rnaEasy.dmso.nanosight.plt
+
+```
+#### 
+```{r}
+exoTIC.3D.nanosight.plt + exoTIC.2D.nanosight.plt
+
+rnaEasy.amg.nanosight.plt + rnaEasy.dmso.nanosight.plt
+
+```
+
 
 
 ## Fig. 2
