@@ -26,6 +26,8 @@ suppressPackageStartupMessages({
   library(ggthemes) 
   library(ggrepel)
   library(ggforce)
+  library(ggpmisc)
+  library(ggprism)
   library(patchwork)
   library(extrafont)
   library(ggrepel)
@@ -54,17 +56,28 @@ suppressMessages(loadfonts())
 ```
 ## setting ggplot theme
 ```{r setting ggplot theme}
-theme_set(theme_foundation(base_size = 8,
+
+base_size = 10
+
+theme_set(theme_foundation(base_size = base_size,
                            base_family = 'Helvetica') + 
             theme(plot.title = element_blank(),
                 panel.background = element_rect(colour = NA),
                 plot.background = element_rect(colour = NA),
-                panel.border = element_rect(colour = NA),
-                axis.title = element_text(face = "bold",size = rel(1)),
-                axis.title.y = element_text(angle=90,vjust =2),
-                axis.title.x = element_text(vjust = -0.2),
-                axis.text = element_text(size = rel(1)), 
-                axis.line = element_blank(),
+                panel.border = element_rect(colour = NA), 
+                axis.line = element_line(), 
+                axis.line.x = NULL, 
+                axis.line.y = NULL, 
+                axis.text = element_text(size = rel(0.95)), 
+                axis.text.x = element_text(margin = margin(t = 0.8 * base_size/4)), 
+                axis.text.x.top = element_text(margin = margin(b = 0.8 * base_size/4), vjust = 0), 
+                axis.text.y = element_text(margin = margin(r = 0.5 * base_size/4), hjust = 1), 
+                axis.text.y.right = element_text(margin = margin(l = 0.5 * base_size/4), hjust = 0), 
+                axis.ticks = element_line(), 
+                axis.ticks.length = unit(base_size/2.5, "pt"), axis.ticks.length.x = NULL, 
+                axis.ticks.length.x.top = NULL, axis.ticks.length.x.bottom = NULL, 
+                axis.ticks.length.y = NULL, axis.ticks.length.y.left = NULL, 
+                axis.ticks.length.y.right = NULL,
                 strip.text = element_text(size = 6),
                 strip.background = element_blank(),
                 legend.key.size= unit(0.08, "in"),
@@ -72,16 +85,19 @@ theme_set(theme_foundation(base_size = 8,
                 legend.key = element_rect(colour = NA),
                 legend.title = element_text(face="italic"),
                 legend.text = element_text(face = 'bold'),
+                legend.justification = c("right", "top"),
+                legend.box.just = "right",
+                legend.margin = margin(6, 6, 6, 6),
                 plot.margin=margin(0.04,
                                    0.04,
                                    0.04,
                                    0.04,
                                    unit = "in"),
-                legend.margin = margin(-0.04,
-                                   -0.02,
-                                   0.08,
-                                   0.02,
-                                   unit = "in"),
+                # legend.margin = margin(-0.04,
+                #                    -0.02,
+                #                    0.08,
+                #                    0.02,
+                #                    unit = "in"),
                 legend.box.spacing = unit(-0.02, 'in'),
                 panel.grid.major = element_blank(),
                 panel.grid.minor = element_blank()
@@ -120,6 +136,8 @@ theme_set_fun <- function(){
                 panel.grid.major = element_blank(),
                 panel.grid.minor = element_blank()))
 }
+
+theme_prism()
 ```
 ## figure dirs, and other globally relevant constants
 ```{r system I/O constants}
@@ -499,8 +517,8 @@ run.de.seq <- function(tximeta.object){
   
   colData(tximeta.object$gxi) %>% 
     as.data.frame() %>% 
-    mutate(sample = names) #%>% 
-    # merge(batch.annotation %>% select(sample, context, V3:V8), by = 'sample') -> colData.gxi
+    mutate(sample = names) %>% 
+    separate(names, sep = '[.]', into = c(NA, 'context', NA, NA)) -> colData.gxi
   
   print(colnames(colData.gxi))
 
@@ -515,7 +533,7 @@ run.de.seq <- function(tximeta.object){
     print('2D vs 3D')
     dds.gxi <- DESeqDataSetFromMatrix(countData = count.matrix.gxi, 
                                       colData = colData.gxi, 
-                                      design = as.formula(~condition + condition:context))
+                                      design = as.formula(~context + condition:context))
     
   } else if (grepl('_D', tximeta.name)){
     dds.gxi <- DESeqDataSetFromMatrix(countData = count.matrix.gxi, 
@@ -530,7 +548,7 @@ run.de.seq <- function(tximeta.object){
   colData(tximeta.object$txi) %>% 
     as.data.frame() %>% 
     mutate(sample = names) %>% 
-    merge(batch.annotation %>% select(sample, context, V3:V4), by = 'sample') -> colData.txi
+    separate(names, sep = '[.]', into = c(NA, 'context', NA, NA)) -> colData.txi
 
   count.matrix.txi <- assay(tximeta.object$txi, 'counts') %>% 
     as.data.frame() %>% 
@@ -718,7 +736,7 @@ make.fgsea.ranks <- function(de.seq){
   # convert to a tidy format, clean the names for display
   de.seq.fgsea.df <-
     as_tibble(de.seq.fgsea.res) %>%
-    filter(padj < 0.05) %>%
+    filter(padj <= 0.05) %>%
     mutate(pathway = gsub('_', ' ', pathway))
 
   
@@ -774,6 +792,10 @@ salmon.quant$exoTIC_2D$deseq$fgsea %>%
   select(leadingEdge) %>% 
   unlist() %>% 
   unname() -> myc.leading.edge
+
+hallmark.kras.up <- msig.df$HALLMARK_KRAS_SIGNALING_UP
+
+msig.df$EG
 
 salmon.quant$exoTIC_2D$deseq$fgsea %>%
   merge(salmon.quant$rnaEasy_2D$deseq$fgsea, by = 'pathway') %>%
@@ -1272,9 +1294,9 @@ gencode.de.volcano <- function(de.seq){
   print(x.max)
   label.max <- 0.01
   ggplot(de.seq, 
-         aes(-log2FoldChange, -log10(padj), 
+         aes(log2FoldChange, -log10(padj), 
              color = biotype)) +
-      geom_point(alpha = 0.3, size = rel(1)) + 
+      geom_point(alpha = 0.75, size = rel(2)) + 
       geom_rug(size = rel(1), alpha = 0.15) + 
       scale_x_continuous(limits = c(-x.max,x.max), expand = c(0,0.5),
                          breaks = c(-x.max, -x.max/2, -1, 0, 1, x.max/2, x.max)) +
@@ -1288,7 +1310,7 @@ gencode.de.volcano <- function(de.seq){
                               segment.color = 'grey',
                               segment.alpha = 0.2,
                               color = 'black',
-                              ylim = c(0, Inf), size = rel(2))
+                              ylim = c(0, Inf), size = base_size/2, family = 'Helvetica')
 }
 
 fgsea.hallmark.de.volcano <- function(fgsea){
@@ -1318,9 +1340,16 @@ fgsea.hallmark.de.volcano <- function(fgsea){
 ```{r}
 
 gencode.de.volcano(salmon.quant$exoTIC_2D$deseq$de)
-gencode.de.volcano(salmon.quant$exoTIC_3D$deseq$de)
-gencode.de.volcano(salmon.quant$rnaEasy_2D$deseq$de)
-gencode.de.volcano(salmon.quant$rnaEasy_3D$deseq$de)
+gencode.de.volcano(salmon.quant$exoTIC_3D$deseq$de) + theme(legend.position = c(0.15, 0.95))
+gencode.de.volcano(salmon.quant$rnaEasy_2D$deseq$de) + theme(legend.position = c(0.95, 0.95))
+gencode.de.volcano(salmon.quant$rnaEasy_3D$deseq$de) + theme(legend.position = c(0.95, 0.95))
+
+gencode.35.tx.to.gene %>% 
+  filter(gene %in% filter(salmon.quant$rnaEasy_3D$deseq$de, grepl('^LINC', gene))$gene) %>% 
+  merge(as.data.frame(rowRanges(salmon.quant$txi)), by.x = 'enst', by.y = 'tx_name') %>% 
+  distinct() %>% 
+  select(seqnames, start, end, strand) %>% 
+  print(row.names = F)
 
 
 salmon.quant$three_D$deseq$de %>% 
@@ -1347,7 +1376,7 @@ salmon.quant$exoTIC_2D$deseq$de %>%
                               segment.color = 'grey',
                               segment.alpha = 0.2,
                               color = 'black',
-                              ylim = c(-Inf, Inf), size = rel(2))
+                              ylim = c(-Inf, Inf))
 
 
 ```
@@ -1861,12 +1890,12 @@ gene.patient.normalized.counts.pca <-
   # patient.plasma.quant$gene$te.locus.gencode.34.salmon.out %>% 
   # dds.gxi.df %>%
   # dds.gxi.norm.counts %>% 
-  ucsc.rmsk.salmon.quant$deseq$counts %>%
+   ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$counts %>%
   # salmon.quant$covid_v_ctrl$deseq$counts %>%
   # vds.gxi.df %>% 
   # select(-gene, -biotype) %>% 
   # merge(gencode.35.tx.to.gene %>% select('ensg', 'gene') %>% distinct(), by = 'gene') %>%
-  filter_at(vars(contains('.')), any_vars(. >= 1)) %>%
+  filter_at(vars(contains('AMG')), all_vars(. >= 5)) %>%
   # rownames_to_column('gene') %>%
   # select(-ensg) #%>%
   # distinct() %>%
@@ -1880,18 +1909,17 @@ gene.patient.normalized.counts.pca <-
   distinct() %>% 
   # mutate(gene = paste0(gene, '_', ensg)) %>%
   # select(gene, contains('.')) %>% 
-  filter(!grepl('^RP|^MT', gene)) %>% #, ! gene %in% patient.plasma.quant$rfe.gender.profile$optVariables) %>%
+  filter(!grepl('^RP|^MT|)n', gene)) %>% #, ! gene %in% patient.plasma.quant$rfe.gender.profile$optVariables) %>%
   # filter(gene %in% filter(panc1.intra.quant$de.seq$te.locus.gencode.34.salmon.out, log2FoldChange <= -1)$gene) %>%
-  # mutate(gene.cv = rowSds(as.matrix(.[, -c(1)]))/rowMeans(.[,-c(1)])) %>%
-  # mutate(gene.cv = rowSds(as.matrix(select(., contains('.'))))/rowMeans(select(., contains('.')))) %>%
-  mutate(gene.cv = rowSds(as.matrix(select(., contains('.'))))) %>%
+  mutate(gene.cv = rowSds(as.matrix(select(., contains('.'))))/rowMeans(select(., contains('.')))) %>% 
   filter(gene.cv >= median(gene.cv)) %>%
   select(-gene.cv) %>%
   column_to_rownames('gene') %>%
+  # select(-ensg) %>% 
   t() %>% 
   as.data.frame() %>% 
   prcomp(scale=T, center = T)
-
+  
 summary(gene.patient.normalized.counts.pca)
 pcs.of.interest <- apply(gene.patient.normalized.counts.pca$x, 2, var)
 pcs.props <-  pcs.of.interest/sum(pcs.of.interest)
@@ -1931,9 +1959,9 @@ pca.out %>%
   separate(patient, sep = '[.]', 
            into = c('platform', 'context', 'rep', 'condition')) %>%
   ggplot(aes(PC1, PC2,
-             color = platform,
-             shape = condition, size = context)) + 
-    geom_point(size = rel(2), alpha = 0.6) + 
+             color = condition,
+             shape = context)) + 
+    geom_point(size = rel(4), alpha = 0.6) + 
     # scale_size_continuous(range = c(0.1, 2.5), breaks = c(0,5,10,15,20)) + 
     xlab(paste('PC1', round(cumsum(pcs.props)[1], digits = 3), sep = ' ')) +
     ylab(paste('PC2', round(cumsum(pcs.props)[2] - cumsum(pcs.props)[1], digits = 3), sep = ' ')) +
@@ -1945,9 +1973,6 @@ pca.out %>%
             legend.key.width = unit(0.125,'cm'),
             legend.key.height = unit(0.4, 'cm'))
 
-# current.meta.data %>% 
-#   rbind(covid.patient.metadata %>% mutate(diabetes = 0, batch = 5, condition = 'covid') %>% 
-#           select(patient, gender, age, diabetes, condition, batch)) -> current.meta.data
 
 pca.out %>% 
   # rownames_to_column('sample') %>%
@@ -1990,37 +2015,25 @@ library(uwot)
 
 set.seed(234)
 
-pca_umap <- as.data.frame(umap(pca.out, n_neighbors = 7, learning_rate = 0.5, init = "random"))
+pca_umap <- as.data.frame(umap(pca.out, n_neighbors = 3, learning_rate = 0.5, init = "random"))
 
 rownames(pca_umap) <- pca.out$patient
 
 pca_umap %>% 
-  rownames_to_column('patient') %>% 
-  merge(current.meta.data, by = 'patient') %>% 
-  # merge(merge(unsplice.df, splice.df, by = 'sample') %>% 
-  #         mutate(unsplice_rate = unsplice_count / (unsplice_count + splice_count)), 
-  #       by.x = 'patient', by.y = 'sample') %>% 
-  # # mutate(condition = ifelse(condition == 1, 'Panc', 'Ctrl')) %>% 
-  # merge(salmon.tx.normalized.counts.tidy[,c(1,19)],
-  #       by = 'patient.id') %>% 
-  distinct() -> uwot.gencode.plot
+  rownames_to_column('sample') %>% 
+  mutate(condition = sample) %>% 
+  separate(condition, sep = '[.]', into = c('platform', 'context', NA, 'condition')) -> uwot.gencode.plot
 
 ggplot(uwot.gencode.plot, 
        aes(V1, 
            V2, 
-           color = condition,
-           label = patient)) +
+           color = condition, shape = context)) +
   geom_point() +
   ylab('U2') + 
   xlab('U1') +
   geom_hline(yintercept = 0, linetype = 'dotted', alpha = 0.5, size = 0.25) + 
   geom_vline(xintercept = 0, linetype = 'dotted', alpha = 0.5, size = 0.25) + 
-  # ggrepel::geom_text_repel(segment.color = NA,
-  #                          point.padding = NA)  +
-  # scale_color_manual(name = 'condition',
-  #                    values = c('#37b578ff', '#440154ff')) +
-  scale_color_viridis_d() +
-  # scale_color_gsea() +
+  scale_color_manual(name = 'condition', values = viridis(3)[c(1,2)]) +
   theme(legend.position = 'right',
         legend.spacing = unit(0, 'in'))
 
