@@ -749,7 +749,7 @@ make.fgsea.ranks <- function(de.seq){
 ### CALL: make.fgsea.ranks
 ```{r}
 msig.df <- 
-  msigdbr(species = 'Homo sapiens', category = 'H') %>% 
+  msigdbr(species = 'Homo sapiens', category = 'C2') %>% 
   select(gene_symbol, gs_name) %>% 
   split(x = .$gene_symbol, f = .$gs_name)
 
@@ -793,9 +793,21 @@ salmon.quant$exoTIC_2D$deseq$fgsea %>%
   unlist() %>% 
   unname() -> myc.leading.edge
 
+salmon.quant$rnaEasy_3D$deseq$fgsea %>% 
+  filter(pathway == 'ZWANG TRANSIENTLY UP BY 2ND EGF PULSE ONLY') %>% 
+  select(leadingEdge) %>% 
+  unlist() %>% 
+  unname() -> egf.leading.edge
+
+salmon.quant$rnaEasy_2D$deseq$fgsea %>% 
+  filter(pathway == 'RODRIGUES THYROID CARCINOMA POORLY DIFFERENTIATED DN') %>% 
+  select(leadingEdge) %>% 
+  unlist() %>% 
+  unname() -> thy.carcinoma.dn.leading.edge
+
 hallmark.kras.up <- msig.df$HALLMARK_KRAS_SIGNALING_UP
 
-msig.df$EG
+hallmark.emt <- msig.df$HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
 
 salmon.quant$exoTIC_2D$deseq$fgsea %>%
   merge(salmon.quant$rnaEasy_2D$deseq$fgsea, by = 'pathway') %>%
@@ -1342,7 +1354,8 @@ fgsea.hallmark.de.volcano <- function(fgsea){
 gencode.de.volcano(salmon.quant$exoTIC_2D$deseq$de)
 gencode.de.volcano(salmon.quant$exoTIC_3D$deseq$de) + theme(legend.position = c(0.15, 0.95))
 gencode.de.volcano(salmon.quant$rnaEasy_2D$deseq$de) + theme(legend.position = c(0.95, 0.95))
-gencode.de.volcano(salmon.quant$rnaEasy_3D$deseq$de) + theme(legend.position = c(0.95, 0.95))
+gencode.de.volcano(salmon.quant$rnaEasy_2D$deseq$de) + 
+  theme(legend.position = c(0.125, 0.95))
 
 gencode.35.tx.to.gene %>% 
   filter(gene %in% filter(salmon.quant$rnaEasy_3D$deseq$de, grepl('^LINC', gene))$gene) %>% 
