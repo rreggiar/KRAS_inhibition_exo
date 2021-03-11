@@ -79,7 +79,7 @@ theme_set(theme_foundation(base_size = base_size,
                 axis.ticks.length.x.top = NULL, axis.ticks.length.x.bottom = NULL, 
                 axis.ticks.length.y = NULL, axis.ticks.length.y.left = NULL, 
                 axis.ticks.length.y.right = NULL,
-                strip.text = element_text(size = 6),
+                strip.text = element_text(size = 8),
                 strip.background = element_blank(),
                 legend.key.size= unit(0.08, "in"),
                 legend.spacing = unit(0, "in"),
@@ -105,37 +105,49 @@ theme_set(theme_foundation(base_size = base_size,
           ))
 
 theme_set_fun <- function(){
-  theme_set(theme_foundation(base_size = 8,
-                           base_family = 'Helvetica') + 
-            theme(plot.title = element_blank(),
-                panel.background = element_rect(colour = NA),
-                plot.background = element_rect(colour = NA),
-                panel.border = element_rect(colour = NA),
-                axis.title = element_text(face = "bold",size = rel(1)),
-                axis.title.y = element_text(angle=90,vjust =2),
-                axis.title.x = element_text(vjust = -0.2),
-                axis.text = element_text(size = rel(1)), 
-                axis.line = element_blank(),
-                strip.text = element_text(size = 6),
-                strip.background = element_blank(),
-                legend.key.size= unit(0.08, "in"),
-                legend.spacing = unit(0, "in"),
-                legend.key = element_rect(colour = NA),
-                legend.title = element_text(face="italic"),
-                legend.text = element_text(face = 'bold'),
-                plot.margin=margin(0.04,
-                                   0.04,
-                                   0.04,
-                                   0.04,
-                                   unit = "in"),
-                legend.margin = margin(-0.04,
-                                   -0.02,
-                                   -0.08,
-                                   0.02,
-                                   unit = "in"),
-                legend.box.spacing = unit(-0.02, 'in'),
-                panel.grid.major = element_blank(),
-                panel.grid.minor = element_blank()))
+  theme_set(theme_foundation(base_size = base_size,
+                             base_family = 'Helvetica') + 
+              theme(plot.title = element_blank(),
+                  panel.background = element_rect(colour = NA),
+                  plot.background = element_rect(colour = NA),
+                  panel.border = element_rect(colour = NA), 
+                  axis.line = element_line(), 
+                  axis.line.x = NULL, 
+                  axis.line.y = NULL, 
+                  axis.text = element_text(size = rel(0.95)), 
+                  axis.text.x = element_text(margin = margin(t = 0.8 * base_size/4)), 
+                  axis.text.x.top = element_text(margin = margin(b = 0.8 * base_size/4), vjust = 0), 
+                  axis.text.y = element_text(margin = margin(r = 0.5 * base_size/4), hjust = 1), 
+                  axis.text.y.right = element_text(margin = margin(l = 0.5 * base_size/4), hjust = 0), 
+                  axis.ticks = element_line(), 
+                  axis.ticks.length = unit(base_size/2.5, "pt"), axis.ticks.length.x = NULL, 
+                  axis.ticks.length.x.top = NULL, axis.ticks.length.x.bottom = NULL, 
+                  axis.ticks.length.y = NULL, axis.ticks.length.y.left = NULL, 
+                  axis.ticks.length.y.right = NULL,
+                  strip.text = element_text(size = 8),
+                  strip.background = element_blank(),
+                  legend.key.size= unit(0.08, "in"),
+                  legend.spacing = unit(0, "in"),
+                  legend.key = element_rect(colour = NA),
+                  legend.title = element_text(face="italic"),
+                  legend.text = element_text(face = 'bold'),
+                  legend.justification = c("right", "top"),
+                  legend.box.just = "right",
+                  legend.margin = margin(6, 6, 6, 6),
+                  plot.margin=margin(0.04,
+                                     0.04,
+                                     0.04,
+                                     0.04,
+                                     unit = "in"),
+                  # legend.margin = margin(-0.04,
+                  #                    -0.02,
+                  #                    0.08,
+                  #                    0.02,
+                  #                    unit = "in"),
+                  legend.box.spacing = unit(-0.02, 'in'),
+                  panel.grid.major = element_blank(),
+                  panel.grid.minor = element_blank()
+            ))
 }
 
 ```
@@ -816,6 +828,8 @@ make.fgsea.ranks <- function(de.seq){
   rm(de.seq, de.seq.rnk, de.seq.fgsea.res, de.seq.fgsea.df)
   
 }
+
+
 ```
 ### CALL: make.fgsea.ranks
 ```{r}
@@ -824,90 +838,80 @@ msig.df <-
   select(gene_symbol, gs_name) %>% 
   split(x = .$gene_symbol, f = .$gs_name)
 
-salmon.quant$exoTIC_2D$deseq$c6.fgsea <- make.fgsea.ranks(salmon.quant$exoTIC_2D$deseq$de)
-salmon.quant$rnaEasy_2D$deseq$c6.fgsea <- make.fgsea.ranks(salmon.quant$rnaEasy_2D$deseq$de)
-salmon.quant$rnaEasy_3D$deseq$c6.fgsea <- make.fgsea.ranks(salmon.quant$rnaEasy_3D$deseq$de)
+salmon.quant$exoTIC_2D$deseq$H.fgsea <- make.fgsea.ranks(salmon.quant$exoTIC_2D$deseq$de)
+salmon.quant$rnaEasy_2D$deseq$H.fgsea <- make.fgsea.ranks(salmon.quant$rnaEasy_2D$deseq$de)
+salmon.quant$rnaEasy_3D$deseq$H.fgsea <- make.fgsea.ranks(salmon.quant$rnaEasy_3D$deseq$de)
+aale.salmon.quant$deseq$H.fgsea <- make.fgsea.ranks(aale.salmon.quant$deseq$de)
+```
+### FUN: build.signature.lists
+```{r}
+extract.leading.edge <- function(fgsea, deseq){
+  
+  fgsea %>% 
+    filter(pathway == 'HALLMARK MYC TARGETS V1') %>% 
+    select(leadingEdge) %>% 
+    unlist() %>% 
+    unname() -> myc.tmp
+  fgsea %>% 
+    filter(pathway == 'HALLMARK E2F TARGETS') %>% 
+    select(leadingEdge) %>% 
+    unlist() %>% 
+    unname() -> e2f.tmp
+  fgsea %>% 
+    filter(pathway == 'HALLMARK G2M CHECKPOINT') %>% 
+    select(leadingEdge) %>% 
+    unlist() %>% 
+    unname() -> g2m.tmp
+  
+  deseq %>% 
+    filter(gene %in% g12c.sc.marker.genes$`G12C induced`) %>% 
+    select(gene) %>% unlist() %>% unname() -> g12c.tmp
+  
+  return(list('myc.signature' = myc.tmp,
+              'e2f.signature' = e2f.tmp,
+              'g2m.signature' = g2m.tmp,
+              'g12c.signature' = g12c.tmp))
+}
+
+build.signature.lists <- function(){
+  
+  for (signature in c('myc.signature', 'e2f.signature', 'g2m.signature', 'g12c.signature')){
+      consensus.tmp <- Reduce(intersect, list(salmon.quant$exoTIC_2D$deseq$signatures[[toString(signature)]],
+                                                 salmon.quant$rnaEasy_2D$deseq$signatures[[toString(signature)]],
+                                                 salmon.quant$rnaEasy_3D$deseq$signatures[[toString(signature)]]))
+
+      rnaEasy.tmp <- Reduce(intersect, list(salmon.quant$rnaEasy_2D$deseq$signatures[[toString(signature)]],
+                                                   salmon.quant$rnaEasy_3D$deseq$signatures[[toString(signature)]]))
+      
+      two_D.tmp <- Reduce(intersect, list(salmon.quant$rnaEasy_2D$deseq$signatures[[toString(signature)]],
+                                                 salmon.quant$exoTIC_2D$deseq$signatures[[toString(signature)]]))
+      
+      assign(paste0(toString(signature), '_list'), list('consensus' = consensus.tmp,
+                                             'rnaEasy' = rnaEasy.tmp,
+                                             'twoD' = two_D.tmp))
+  }
+  
+  return(list('myc' = myc.signature_list, 
+              'e2f' = e2f.signature_list, 
+              'g2m' = g2m.signature_list, 
+              'g12c' = g12c.signature_list))
+}
+```
+### CALL: build.signature.lists
+```{r}
+salmon.quant$exoTIC_2D$deseq$signatures <- 
+  extract.leading.edge(salmon.quant$exoTIC_2D$deseq$H.fgsea, salmon.quant$exoTIC_2D$deseq$de)
+
+salmon.quant$rnaEasy_2D$deseq$signatures <- 
+  extract.leading.edge(salmon.quant$rnaEasy_2D$deseq$H.fgsea, salmon.quant$rnaEasy_2D$deseq$de)
+
+salmon.quant$rnaEasy_3D$deseq$signatures <- 
+  extract.leading.edge(salmon.quant$rnaEasy_3D$deseq$H.fgsea, salmon.quant$rnaEasy_3D$deseq$de)
 
 
-salmon.quant$rnaEasy_dmso$deseq$h.fgsea <- make.fgsea.ranks(salmon.quant$rnaEasy_dmso$deseq$de)
+signature.list <- build.signature.lists()
 
-salmon.quant$exoTIC_3D$deseq$fgsea <- make.fgsea.ranks(salmon.quant$exoTIC_3D$deseq$de)
-salmon.quant$rnaEasy_all$deseq$fgsea <- make.fgsea.ranks(salmon.quant$rnaEasy_all$deseq$de)
-salmon.quant$exoTIC_all$deseq$fgsea <- make.fgsea.ranks(salmon.quant$exoTIC_all$deseq$de)
-
-salmon.quant$two_D$deseq$fgsea <- make.fgsea.ranks(salmon.quant$two_D$deseq$de)
-salmon.quant$three_D$deseq$fgsea <- make.fgsea.ranks(salmon.quant$three_D$deseq$de)
-
-salmon.quant$exoTIC_2D$deseq$fgsea %>%
-  select(pathway, padj, NES) %>% 
-  mutate(experiment = 'exoTIC_2D') %>% 
-  rbind(salmon.quant$rnaEasy_2D$deseq$fgsea %>% 
-  select(pathway, padj, NES) %>% 
-  mutate(experiment = 'rnaEasy_2D')) %>% 
-  rbind(salmon.quant$rnaEasy_3D$deseq$fgsea %>% 
-  select(pathway, padj, NES) %>% 
-  mutate(experiment = 'rnaEasy_3D')) %>% 
-  # select(-NES) %>% 
-  mutate(padj = -log10(padj)) %>% 
-  separate(pathway, sep = 'HALLMARK ', into = c(NA, 'pathway')) %>% 
-  select(-padj) %>% 
-  spread(experiment, NES) %>%
-  replace(is.na(.), 0) %>%
-  column_to_rownames('pathway') %>%
-  pheatmap(color = viridis(32, option = 'magma'))
-  # ggplot(aes(pathway,NES, color = padj)) +
-  # geom_boxplot(fill = NA) +
-  # geom_sina() + theme(axis.text.x = element_text(angle = 40, hjust = 1))
-
-salmon.quant$exoTIC_2D$deseq$c6.fgsea %>%
-  select(pathway, padj, NES) %>% 
-  rename(NES = 'exoTIC_2D') %>% 
-  merge(salmon.quant$rnaEasy_2D$deseq$c6.fgsea %>% 
-  select(pathway, padj, NES) %>% 
-  rename(NES = 'rnaEasy_2D'), by = 'pathway') %>% 
-  merge(salmon.quant$rnaEasy_3D$deseq$c6.fgsea %>%
-  select(pathway, padj, NES) %>%
-  rename(NES = 'rnaEasy_3D'), by = 'pathway') %>%
-  column_to_rownames('pathway') %>%
-  select(-contains('padj')) %>% 
-  pheatmap()#color = viridis(32, option = 'magma'))
-
-salmon.quant$exoTIC_2D$deseq$fgsea %>% 
-  filter(pathway == 'HALLMARK MYC TARGETS V1') %>% 
-  select(leadingEdge) %>% 
-  unlist() %>% 
-  unname() -> myc.leading.edge
-
-salmon.quant$rnaEasy_3D$deseq$fgsea %>% 
-  filter(pathway == 'ZWANG TRANSIENTLY UP BY 2ND EGF PULSE ONLY') %>% 
-  select(leadingEdge) %>% 
-  unlist() %>% 
-  unname() -> egf.leading.edge
-
-salmon.quant$rnaEasy_2D$deseq$fgsea %>% 
-  filter(pathway == 'RODRIGUES THYROID CARCINOMA POORLY DIFFERENTIATED DN') %>% 
-  select(leadingEdge) %>% 
-  unlist() %>% 
-  unname() -> thy.carcinoma.dn.leading.edge
-
-salmon.quant$exoTIC_2D$deseq$fgsea %>% 
-  filter(pathway == 'MANNO MIDBRAIN NEUROTYPES HGABA') %>% 
-  select(leadingEdge) %>% 
-  unlist() %>% 
-  unname() -> midbrain.neuro.leading.edge
-
-hallmark.kras.up <- msig.df$HALLMARK_KRAS_SIGNALING_UP
-
-hallmark.emt <- msig.df$HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
-
-salmon.quant$rnaEasy_3D$deseq$fgsea %>%
-  merge(salmon.quant$rnaEasy_2D$deseq$fgsea, by = 'pathway') %>%
-  select(pathway, NES.x, NES.y) %>%
-  ggplot(aes(NES.x, NES.y)) +
-  geom_point() +
-  geom_text_repel(aes(label = pathway), size = rel(2)) + 
-  geom_hline(yintercept = 0, linetype = 'dashed', alpha=0.2) + 
-  geom_vline(xintercept = 0, linetype = 'dashed', alpha=0.2)
+signature.list$myc$consensus
 
 ```
 ## FUN: rerwip create.tcga.obj
@@ -968,75 +972,61 @@ if (! file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv')
 
 
 norm.counts.final %>% 
-  filter(gene %in% g12c.sc.marker.genes$`G12C induced`) %>% 
+  filter(gene %in% c(signature.list$myc$consensus,
+                     signature.list$e2f$consensus,
+                     signature.list$g2m$consensus)) %>% 
   select(sample, count, gene) %>% 
+  mutate(count = log(count + 1),
+         count = scale(count, center = T)) %>% 
   pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
   column_to_rownames('sample') %>% 
-  pheatmap(show_rownames = F, show_colnames = F, 
-           annotation_row = luad.phenotypes.merge %>% 
-             select(sample, sample_type, KRAS) %>% 
-             mutate(KRAS = paste(KRAS)) %>% 
+  t() %>% as.data.frame() #%>% 
+  pheatmap(show_rownames = T, show_colnames = F, 
+           annotation_col = luad.phenotypes.merge %>% 
+             select(sample, sample_type, KRAS, TP53) %>% 
+             mutate(KRAS = paste(KRAS), TP53 = paste(TP53)) %>% 
+             mutate(KRAS = ifelse(grepl('G12C', KRAS), 'G12C', ifelse(is.na(KRAS), 'n/a', 'otherMut')),
+                    TP53 = ifelse(grepl('NULL', TP53), 'WT', ifelse(is.na(TP53), 'n/a', 'Mut'))) %>% 
              filter(! sample %in% c('TCGA-44-2656-01', 'TCGA-44-2668-01', 
                                     'TCGA-44-3917-01', 'TCGA-44-3918-01', 'TCGA-44-5645-01', 'TCGA-44-6775-01')) %>% 
              distinct() %>% 
              column_to_rownames('sample'))
 
-luad.phenotypes.merge %>% 
-   select(sample, sample_type, KRAS) %>% 
-   mutate(KRAS = paste(KRAS)) -> tmp.df
-
-
-
-
-# toil.quant$myc.avg.counts.tidy.stratified <-
-#   toil.quant$norm.counts.tidy %>% 
-#   filter(type == 'Primary Tumor') %>% 
-#   filter(gene %in% myc.list) %>% 
-#   group_by(sample, category, disease, tissue, type) %>% 
-#   summarize(avg.count = mean(count)) %>% 
-#   mutate(gene.set = 'myc') %>% 
-#   group_by(gene.set) %>% 
-#   mutate(stratum = ifelse(avg.count >= quantile(avg.count, 0.66),
-#                           'top-third', ifelse(avg.count <= quantile(avg.count, 0.33),
-#                                               'bottom-third', 'middle'))) %>% 
-#   filter(stratum != 'middle') %>% 
-#   spread(gene.set, stratum)
-
-# toil.quant$norm.counts.tidy.stratified <- 
-#   toil.quant$norm.counts.tidy %>% 
-#   filter(!grepl('GTEX', sample)) %>% 
-#   group_by(gene) %>%
-#   mutate(stratum = ifelse(count >= quantile(count, 0.66),
-#                           'top-third', ifelse(count <= quantile(count, 0.33),
-#                                               'bottom-third', 'middle')))
+myc.avg.counts.tidy.stratified <-
+  norm.counts.final %>%
+  # filter(! sample %in% c('TCGA-44-2656-01', 'TCGA-44-2668-01',
+  #                                   'TCGA-44-3917-01', 'TCGA-44-3918-01', 'TCGA-44-5645-01', 'TCGA-44-6775-01')) %>%
+  filter(sample_type == 'Primary Tumor',
+         grepl('G12C', KRAS)) %>%
+  filter(gene %in% signature.list$g2m$twoD) %>%
+  select(sample, count) %>% 
+  group_by(sample) %>%
+  summarize(avg.count = mean(count)) %>%
+  mutate(gene.set = 'myc') %>%
+  group_by(gene.set) %>%
+  mutate(stratum = ifelse(avg.count >= quantile(avg.count, 0.66),
+                          'top-third', ifelse(avg.count <= quantile(avg.count, 0.33),
+                                              'bottom-third', 'middle'))) %>%
+  filter(stratum != 'middle') %>%
+  spread(gene.set, stratum)
 
 
 library(survival)
 library(survminer)
 
-toil.quant$multi.gene.de.set <-
-  toil.quant$norm.counts.tidy.stratified %>%
-  select(-ensg, -count, -category, -disease, -tissue,
-         -study) %>% 
-  #filter(gene %in% filter(panc1.intra.quant$de.seq$gencode.34.salmon.out, log2FoldChange < -1)$gene) %>%
-  # filter(gene %in% c('KRAS', "GRAP2", "PDLIM1", "ACRBP", "PTPN18", "MAX")) %>%
-  filter(gene %in% c('IFI27', 'GIMAP4', 'CARD16', 'CCL14', 'LY96')) %>%
-  # filter(gene %in% c(patient.plasma.quant$rfe.condition.profile$optVariables, 'MIR4435-2HG')) %>%
-  mutate(stratum = relevel(as.factor(stratum), ref = 'middle')) %>%
-  distinct() %>% 
-  pivot_wider(id_cols = sample, names_from = gene, values_from = stratum) %>% 
-  mutate_if(is.list, as.factor)
+surv.obj <- Surv(time = filter(luad.phenotypes.merge %>% select(sample, OS.time, OS) %>% distinct() , sample %in%
+                                 myc.avg.counts.tidy.stratified$sample)$OS.time,
+                 event = filter(luad.phenotypes.merge %>% select(sample, OS.time, OS) %>% distinct(), sample %in% 
+                                 myc.avg.counts.tidy.stratified$sample)$OS)
 
-surv.obj <- Surv(time = filter(toil.quant$toil.survival,
-                                          sample %in% toil.quant$multi.gene.de.set$sample)$OS.time,
-                            event = filter(toil.quant$toil.survival,
-                                           sample %in% toil.quant$multi.gene.de.set$sample)$OS)
+surv.fit <- survfit(as.formula(surv.obj ~ myc.avg.counts.tidy.stratified$myc), data = myc.avg.counts.tidy.stratified)
 
-surv.fit <- survfit(as.formula(surv.obj ~ IFI27), data = toil.quant$multi.gene.de.set)
-ggsurvplot(surv.fit, pval = T)
-coxph.fit <- coxph(surv.obj ~ GIMAP4 + IFI27 + CARD16 + CCL14 + LY96,
-                   data = toil.quant$multi.gene.de.set)
-ggforest(coxph.fit) + theme_set_fun()
+ggsurvplot(surv.fit, 
+           pval = T, 
+           ggtheme = theme_set_fun(), 
+           palette = viridis(20, option = 'magma')[c(6,18)]) 
+
+# panel.save(figure = 4, name = 'tcag.paad.myc.gene.set.km', height = 'single', width = 'single')
 
 ```
 ### classify tcga on plasma features
@@ -1338,126 +1328,7 @@ merge(patient.plasma.quant$de.seq$gencode.34.salmon.out, panc1.intra.quant$de.se
 
 
 ```
-### A: Biotype distribution 
-```{r}
-biotype.dist <- function(tx.counts){
-  return(tx.counts %>% 
-    rownames_to_column('enst') %>% 
-    merge(gencode.35.tx.to.gene, by = 'enst') %>% 
-    gather(sample, count, -enst, -ensg:-biotype) %>% 
-    mutate(sample.parse = sample) %>% 
-    separate(sample.parse, sep = '[.]', 
-           into = c('platform', 'context', 'rep', 'condition')) %>% 
-    group_by(biotype, sample, condition) %>% 
-    summarise(count = sum(count)) %>% 
-    group_by(sample) %>% 
-    mutate(freq = count / sum(count)) %>% 
-    mutate(biotype = ifelse(biotype %in% c('lncRNA', 'Mt_rRNA', 'protein_coding',
-                                           'non_stop_decay', 'nonsense_mediated_decay', 'retained_intron',
-                                           'processed_transcript', 'Alu', 'L1', 'ERV1'),
-                            biotype, 'other'))) #%>%
-    # mutate(biotype = ifelse(biotype %in% te.families.clades$family, 'TE', biotype)))
-}
 
-tot.biotype.dist <- function(tx.counts){
-  return(tx.counts %>% 
-    rownames_to_column('enst') %>% 
-    merge(total.tx.to.gene, by = 'enst') %>% 
-    gather(sample, count, -enst, -ensg:-biotype) %>% 
-    mutate(sample.parse = sample) %>% 
-    separate(sample.parse, sep = '[.]', 
-           into = c('platform', 'context', 'rep', 'condition')) %>% 
-    group_by(biotype, sample, condition) %>% 
-    summarise(count = sum(count)) %>% 
-    group_by(sample) %>% 
-    mutate(freq = count / sum(count)) %>% 
-    mutate(biotype = ifelse(biotype %in% c('lncRNA', 'Mt_rRNA', 'protein_coding', 'retained_intron',
-                                           'Alu', 'L1', 'ERV1'),
-                            biotype, 'other'))) #%>%
-    # mutate(biotype = ifelse(biotype %in% te.families.clades$family, 'TE', biotype)))
-}
-
-
-biotype.dist.plt <- function(tx.biotype.dist){
-  tx.biotype.dist %>% 
-    merge(metadata.df, by.x = 'sample', by.y = 'names') %>% 
-    distinct() %>% 
-    unite(condition, c(condition.x, context)) %>% 
-    mutate(condition = factor(condition, levels = c('DMSO_2D', 'AMG_2D', 'DMSO_3D', 'AMG_3D')),
-           tmp = sample) %>% 
-    separate(tmp, sep='[.]', into = c(NA, NA, 'rep', NA)) %>% 
-    ggplot(aes(rep, freq, fill = biotype, color = biotype)) +
-      geom_bar(stat = 'identity', color = 'white') +
-      scale_fill_viridis_d( direction = 1) +
-      # scale_color_viridis_d(direction = 1) +
-      scale_x_discrete(expand = c(0, 0.5)) +
-      # scale_y_continuous(expand = c(0.5,0.5)) + 
-      # geom_hline(yintercept = seq(0,1,0.25), color = 'white') +
-      xlab('') + ylab('% of total counts') +
-      # theme(axis.text.x = element_text(angle = 40, hjust = 1)) + 
-    facet_row(~condition, scales = 'free_x')
-}
-
-
-tot.biotype.dist.plt <- function(tx.counts, control = 'ctrl', treatment){
-  tx.counts %>% 
-    rownames_to_column('enst') %>% 
-    merge(total.tx.to.gene, by = 'enst') %>% 
-    gather(sample, count, -enst, -ensg:-biotype) %>% 
-    merge(current.meta.data, by.x = 'sample', by.y = 'patient') %>% 
-    # filter(biotype != 'Mt_rRNA') %>% 
-    group_by(biotype, sample, condition) %>% 
-    summarise(count = sum(count)) %>% 
-    group_by(sample) %>% 
-    mutate(freq = count / sum(count)) #%>% 
-    # mutate(biotype = ifelse(biotype %in% c('lncRNA', 'protein_coding', 'Alu', 'L1', 'ERV1'),
-    #                         biotype, 'other'),
-    #        condition = ifelse(grepl('ctrl', sample), control, treatment)) %>% 
-    # mutate(condition = ifelse(grepl('ctrl', sample), control, treatment)) %>% 
-    # mutate(biotype = ifelse(biotype %in% te.families.clades$family, 'TE', biotype)) %>% 
-    # ggplot(aes(sample, freq, fill = biotype, color = biotype)) + 
-    #   geom_bar(stat = 'identity') +
-    #   # geom_boxplot(outlier.size = NULL,position = position_dodge(width = 1)) + 
-    #   #geom_sina(position = position_dodge(width = 1)) +
-    #   scale_fill_viridis_d( direction = -1) +
-    #   scale_color_viridis_d(direction = -1) + 
-    #   scale_x_discrete(expand = c(0, 0.5)) +
-    #   geom_hline(yintercept = seq(0,1,0.25), color = 'white') + 
-    #   xlab('') + ylab('% of total counts') + 
-    #   theme(axis.text.x = element_text(angle = 40, hjust = 1))
-    # ggplot(aes(reorder(biotype, -freq), freq, fill = condition, color = condition)) +
-    #   geom_boxplot() +
-    #   # geom_sina() +
-    #   scale_fill_viridis_d( direction = -1) +
-    #   scale_color_viridis_d(direction = -1) +
-    #   theme(axis.text.x = element_text(angle = 40, hjust = 1))
-}
-```
-####
-```{r}
-
-salmon.quant$rnaEasy_all$deseq$biotype.dist <- biotype.dist(salmon.quant$rnaEasy_all$deseq$txi.counts)
-
-biotype.dist.plt(salmon.quant$rnaEasy_all$deseq$biotype.dist)
-
-
-ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$biotype.dist <-
-  tot.biotype.dist(ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$txi.counts)
-
-biotype.dist.plt(ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$biotype.dist)
-
-merge(biotype.dist, tot.biotype.dist, by = c('biotype', 'sample')) %>% 
-  select(biotype, sample, condition = condition.x, gencode_freq = freq.x, total_freq = freq.y) %>% 
-  # filter_at(vars(contains('_freq')), all_vars(. >= 0.01)) %>% 
-  filter(biotype %in% c('protein_coding', 'Mt_rRNA', 'lncRNA', 'processed_transcript', 'nonsene_mediated_decay', 'retained_intron')) %>% 
-  mutate(freq_diff = total_freq - gencode_freq) %>% 
-  ggplot(aes(reorder(biotype, freq_diff), freq_diff, color = condition)) + 
-  geom_boxplot(position = position_dodge(width = 1)) + 
-  geom_sina(position = position_dodge(width = 1)) + 
-  scale_color_viridis_d()
-  
-
-```
 
 ### Tx coverage
 ```{r}
@@ -1487,6 +1358,89 @@ salmon.quant$rnaEasy_all$deseq$tx.cov %>%
 
 
 ## Fig 1.
+
+### A: Biotype distribution 
+```{r}
+biotype.dist <- function(tx.counts){
+  return(tx.counts %>% 
+    rownames_to_column('enst') %>% 
+    merge(gencode.35.tx.to.gene, by = 'enst') %>% 
+    gather(sample, count, -enst, -ensg:-biotype) %>% 
+    mutate(sample.parse = sample) %>% 
+    separate(sample.parse, sep = '[.]', 
+           into = c('platform', 'context', 'rep', 'condition')) %>% 
+    mutate(biotype = ifelse(biotype %in% c('lncRNA', 'Mt_rRNA', 'protein_coding', 'retained_intron',
+                                           'Alu', 'L1', 'ERV1'),
+                        biotype, 'other'),
+           biotype = factor(biotype, levels = c('protein_coding', 'retained_intron', 'Mt_rRNA', 'lncRNA', 'other'))) %>%
+    group_by(biotype, sample, condition) %>% 
+    summarise(count = sum(count)) %>% 
+    group_by(sample) %>% 
+    mutate(freq = count / sum(count)))
+}
+
+tot.biotype.dist <- function(tx.counts){
+  return(tx.counts %>% 
+    rownames_to_column('enst') %>% 
+    merge(total.tx.to.gene, by = 'enst') %>% 
+    gather(sample, count, -enst, -ensg:-biotype) %>% 
+    mutate(sample.parse = sample) %>% 
+    separate(sample.parse, sep = '[.]', 
+           into = c('platform', 'context', 'rep', 'condition')) %>% 
+    mutate(biotype = ifelse(biotype %in% c('lncRNA', 'Mt_rRNA', 'protein_coding', 'retained_intron',
+                                           'Alu', 'L1', 'ERV1'),
+                            biotype, 'other'),
+           biotype = factor(biotype, levels = c('protein_coding', 'retained_intron', 'Mt_rRNA', 'lncRNA',
+                            'Alu', 'L1', 'ERV1'))) %>% 
+    group_by(biotype, sample, condition) %>% 
+    summarise(count = sum(count)) %>% 
+    group_by(sample) %>% 
+    mutate(freq = count / sum(count)))
+}
+
+
+biotype.dist.plt <- function(tx.biotype.dist){
+  tx.biotype.dist %>% 
+    merge(metadata.df, by.x = 'sample', by.y = 'names') %>% 
+    distinct() %>% 
+    unite(condition, c(condition.x, context)) %>% 
+    mutate(condition = factor(condition, levels = c('DMSO_2D', 'AMG_2D', 'DMSO_3D', 'AMG_3D')),
+           tmp = sample) %>% 
+    separate(tmp, sep='[.]', into = c(NA, NA, 'rep', NA)) %>% 
+    ggplot(aes(rep, freq, fill = biotype, color = biotype)) +
+      geom_bar(stat = 'identity', color = 'white') +
+      scale_fill_viridis_d( direction = 1) +
+      scale_x_discrete(expand = c(0, 0.5)) +
+      xlab('') + ylab('% of total counts') +
+    facet_row(~condition, scales = 'free_x')
+}
+
+```
+####
+```{r}
+
+salmon.quant$rnaEasy_all$deseq$biotype.dist <- biotype.dist(salmon.quant$rnaEasy_all$deseq$txi.counts)
+
+biotype.dist.plt(salmon.quant$rnaEasy_all$deseq$biotype.dist)
+
+
+ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$biotype.dist <-
+  tot.biotype.dist(ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$txi.counts)
+
+biotype.dist.plt(ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$biotype.dist)
+
+merge(biotype.dist, tot.biotype.dist, by = c('biotype', 'sample')) %>% 
+  select(biotype, sample, condition = condition.x, gencode_freq = freq.x, total_freq = freq.y) %>% 
+  # filter_at(vars(contains('_freq')), all_vars(. >= 0.01)) %>% 
+  filter(biotype %in% c('protein_coding', 'Mt_rRNA', 'lncRNA', 'processed_transcript', 'nonsene_mediated_decay', 'retained_intron')) %>% 
+  mutate(freq_diff = total_freq - gencode_freq) %>% 
+  ggplot(aes(reorder(biotype, freq_diff), freq_diff, color = condition)) + 
+  geom_boxplot(position = position_dodge(width = 1)) + 
+  geom_sina(position = position_dodge(width = 1)) + 
+  scale_color_viridis_d()
+  
+
+```
 
 ### A: Volcano
 ```{r}
@@ -2118,6 +2072,40 @@ rnaEasy.amg.nanosight.plt #+ rnaEasy.dmso.nanosight.plt
 
 ```
 
+### GSEA Heatmaps
+```{r}
+
+salmon.quant$exoTIC_2D$deseq$fgsea %>%
+  select(pathway, padj, NES) %>% 
+  mutate(experiment = 'exoTIC_2D') %>% 
+  rbind(salmon.quant$rnaEasy_2D$deseq$fgsea %>% 
+  select(pathway, padj, NES) %>% 
+  mutate(experiment = 'rnaEasy_2D')) %>% 
+  rbind(salmon.quant$rnaEasy_3D$deseq$fgsea %>% 
+  select(pathway, padj, NES) %>% 
+  mutate(experiment = 'rnaEasy_3D')) %>% 
+  mutate(padj = -log10(padj)) %>% 
+  separate(pathway, sep = 'HALLMARK ', into = c(NA, 'pathway')) %>% 
+  select(-padj) %>% 
+  spread(experiment, NES) %>%
+  replace(is.na(.), 0) %>%
+  column_to_rownames('pathway') %>%
+  pheatmap(color = viridis(32, option = 'magma'))
+
+salmon.quant$exoTIC_2D$deseq$H.fgsea %>%
+  select(pathway, padj, NES) %>% 
+  rename(NES = 'exoTIC_2D') %>% 
+  merge(salmon.quant$rnaEasy_2D$deseq$H.fgsea %>% 
+  select(pathway, padj, NES) %>% 
+  rename(NES = 'rnaEasy_2D'), by = 'pathway') %>% 
+  merge(salmon.quant$rnaEasy_3D$deseq$H.fgsea %>%
+  select(pathway, padj, NES) %>%
+  rename(NES = 'rnaEasy_3D'), by = 'pathway') %>%
+  column_to_rownames('pathway') %>%
+  select(-contains('padj')) %>% 
+  pheatmap(color = viridis(32, option = 'magma'))
+
+```
 
 
 ## Fig. 2
@@ -2134,7 +2122,7 @@ gene.patient.normalized.counts.pca <-
   # vds.gxi.df %>% 
   # select(-gene, -biotype) %>% 
   # merge(gencode.35.tx.to.gene %>% select('ensg', 'gene') %>% distinct(), by = 'gene') %>%
-  filter_at(vars(contains('AMG')), all_vars(. >= 5)) %>%
+  # filter_at(vars(contains('AMG')), all_vars(. >= 5)) %>%
   rownames_to_column('gene') %>%
   # select(-ensg) #%>%
   # distinct() %>%
@@ -2157,6 +2145,19 @@ gene.patient.normalized.counts.pca <-
   # select(-ensg) %>% 
   t() %>% 
   as.data.frame() %>% 
+  prcomp(scale=T, center = T)
+
+gene.patient.normalized.counts.pca <- 
+  norm.counts.final %>% 
+  filter(gene %in% c(signature.list$myc$consensus,
+                     signature.list$e2f$consensus,
+                     signature.list$g2m$consensus)) %>% 
+  select(sample, count, gene) %>% 
+  mutate(count = log(count + 1),
+         count = scale(count, center = T)) %>% 
+  pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
+  column_to_rownames('sample') %>% 
+  # t() %>% as.data.frame() %>% 
   prcomp(scale=T, center = T)
   
 summary(gene.patient.normalized.counts.pca)
@@ -2195,11 +2196,12 @@ pca.out.contributions <-
 
 # plot PC1 and PC2
 pca.out %>% 
-  separate(patient, sep = '[.]', 
-           into = c('platform', 'context', 'rep', 'condition')) %>%
+  merge(luad.phenotypes.merge, by.x = 'patient', by.y = 'sample') %>% 
+  # separate(patient, sep = '[.]', 
+  #          into = c('platform', 'context', 'rep', 'condition')) %>%
   ggplot(aes(PC1, PC2,
-             color = condition,
-             shape = context)) + 
+             color = sample_type,
+             shape = sex)) + 
     geom_point(size = rel(4), alpha = 0.6) + 
     # scale_size_continuous(range = c(0.1, 2.5), breaks = c(0,5,10,15,20)) + 
     xlab(paste('PC1', round(cumsum(pcs.props)[1], digits = 3), sep = ' ')) +
@@ -2260,19 +2262,21 @@ rownames(pca_umap) <- pca.out$patient
 
 pca_umap %>% 
   rownames_to_column('sample') %>% 
-  mutate(condition = sample) %>% 
-  separate(condition, sep = '[.]', into = c('platform', 'context', NA, 'condition')) -> uwot.gencode.plot
+  merge(luad.phenotypes.merge, by = 'sample') -> uwot.gencode.plot
+  # mutate(condition = sample) %>% 
+  # separate(condition, sep = '[.]', into = c('platform', 'context', NA, 'condition')) -> uwot.gencode.plot
 
-ggplot(uwot.gencode.plot, 
+ggplot(uwot.gencode.plot %>% 
+         mutate(KRAS = ifelse(grepl('G12C', KRAS), 'G12C', ifelse(is.na(KRAS), 'n/a', 'otherMut'))), 
        aes(V1, 
            V2, 
-           color = condition, shape = context)) +
+           color = KRAS, shape = sample_type)) +
   geom_point() +
   ylab('U2') + 
   xlab('U1') +
   geom_hline(yintercept = 0, linetype = 'dotted', alpha = 0.5, size = 0.25) + 
   geom_vline(xintercept = 0, linetype = 'dotted', alpha = 0.5, size = 0.25) + 
-  scale_color_manual(name = 'condition', values = viridis(3)[c(1,2)]) +
+  # scale_color_manual(name = 'condition', values = viridis(3)[c(1,2)]) +
   theme(legend.position = 'right',
         legend.spacing = unit(0, 'in'))
 
@@ -2565,332 +2569,6 @@ panel.save('supplement', 'patient.multi.mapping.rate.dist', width = 'single', he
 
 ```
 
-## U18 HIV mapping
-```{r}
-hiv_mapping <- read_csv('scripts/eric.data/hiv_mapping.csv', col_names = c('sample', NA, 'rate')) %>% 
-  separate(sample, sep = '_', into = c('sample', 'rep', NA))
-
-ggplot(hiv_mapping, aes(reorder(sample, -rate), rate, color = sample, fill = sample)) + 
-  geom_sina(alpha = 0.6, position = position_dodge(width = 1), size = rel(1.5)) +
-  geom_boxplot(outlier.colour = NA, position = position_dodge(width = 1), fill = NA, size = rel(0.25)) +
-  # geom_col() +
-  # theme(axis.text.x = element_text(angle = 40, hjust = 1)) +
-  scale_fill_d3() + 
-  scale_color_d3() +
-  # scale_fill_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) +
-  # scale_color_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) +
-  ylab('% unique mapping') + xlab('')
-
-ggsave('scripts/eric.data/hiv_mapping.boxplot.pdf', width = 2.5, height = 2.5, units = 'in')
-```
-
-### COVID preliminary analysis
-```{r}
-
-znf.list <- read_csv('data/reference/all.human.znf.trono.db.csv') #,
-  #                    col_names = c('gene',NA,NA,NA,NA,NA,NA,NA)) %>% 
-  # select(gene)
-
-covid.test.de <- 
-  read_csv('scripts/eric.data/gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.csv') %>% 
-  rename(gene = 'X1') #%>% 
-  # filter(padj < 0.05, abs(log2FoldChange) > 0.5)
-
-gencode.de.volcano(covid.test.de)
-
-ggsave('scripts/eric.data/covid.overall.gencode.volcano.pdf', width = 3, height = 3)
-
-gencode.de.volcano(covid.test.de %>% filter(gene %in% gen.34.lnc.names$gene))
-
-ggsave('scripts/eric.data/covid.lncRNA.gencode.volcano.pdf', width = 3, height = 3)
-
-gencode.de.volcano(covid.test.de %>% filter(gene %in% znf.list$gene))
-
-ggsave('scripts/eric.data/covid.znf.gencode.volcano.pdf', width = 3, height = 3)
-
-gencode.de.volcano(covid.test.de %>% filter(gene %in% msig.df$HALLMARK_INFLAMMATORY_RESPONSE))
-
-ggsave('scripts/eric.data/covid.hallmark.inflamm.gencode.volcano.pdf', width = 3, height = 3)
-
-gencode.de.volcano(covid.test.de %>% filter(gene %in% msig.df$HALLMARK_KRAS_SIGNALING_UP))
-
-ggsave('scripts/eric.data/covid.hallmark.kras.up.gencode.volcano.pdf', width = 3, height = 3)
-
-gencode.de.volcano(covid.test.de %>% filter(gene %in% msig.df$REACTOME_MAPK_FAMILY_SIGNALING_CASCADES))
-
-ggsave('scripts/eric.data/covid.hallmark.mapk.gencode.volcano.pdf', width = 3, height = 3)
-
-# write.csv(file = 'scripts/eric.data/significant.gencode.te.de.csv', covid.test.te.de)
-
-
-covid.test.te.de <- 
-  read_csv('scripts/eric.data/te.locus.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.csv') %>% 
-  rename(gene = 'X1') #%>% 
-  # filter(padj < 0.05, abs(log2FoldChange) > 0.5)
-
-
-# write.csv(file = 'scripts/eric.data/significant.gencode.de.csv', covid.test.de)
-
-te.de.volcano(covid.test.te.de)
-ggsave('scripts/eric.data/covid.te.clades.volcano.pdf', width = 3, height = 3)
-
-covid.test.fgsea <- make.fgsea.ranks(covid.test.de)
-
-covid.patient.metadata <- read_csv('/home/rreggiar/output.data/covid.patient.metadata.csv')
-
-covid.patient.gene.norm.gencode.counts <- 
-  read_csv('scripts/eric.data/gene.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.counts.csv') %>% 
-  rename(gene = 'X1') %>% 
-  gather(patient, norm.counts, -gene) %>% 
-  filter(!grepl('ctrl', patient)) %>% 
-  merge(covid.patient.metadata, by = 'patient')
-
-covid.patient.gene.norm.gencode.counts %>% 
-  filter(gene == 'BRAF') %>% 
-  lm(norm.counts ~ tsd, .) %>% 
-  summary()
-  # filter(gene %in% covid.test.de$gene,
-  #        gene %in% msig.df$HALLMARK_INFLAMMATORY_RESPONSE) %>% 
-  # mutate(group = 'inflamm') %>% 
-  # group_by(patient, tsd, age, group)
-  ggplot(aes(tsd, log(norm.counts + 1))) + 
-  geom_point() + 
-  geom_line() + 
-  stat_smooth(method = 'lm')
-
-covid.patient.gene.norm.rmsk.gencode.counts <-
-  read_csv('scripts/eric.data/gene.te.locus.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.counts.csv') %>% 
-  rename(gene = 'X1') %>% 
-  gather(patient, norm.counts, -gene) %>% 
-  # filter(!grepl('ctrl', patient)) %>% 
-  # merge(covid.patient.metadata, by = 'patient')
-  mutate(condition = ifelse(grepl('covid', patient), 'covid', 'ctrl'))
-
-ggplot(covid.patient.gene.norm.rmsk.gencode.counts %>% 
-         filter(gene %in% c('CXCL8', 'IL7R', 'BRAF','ZNF91', 'HERVI-int', 'KRAS', 'L1HS', 'NFKB1','LTR10A')), 
-       aes(reorder(gene, -norm.counts), log(norm.counts + 1), fill = condition, color = condition)) + 
-  geom_jitter(alpha = 0.3, position = position_dodge(width = 1), size = rel(1.5)) + 
-  geom_boxplot(outlier.colour = NA, position = position_dodge(width = 1), fill = NA, size = rel(0.25)) + 
-  theme(axis.text.x = element_text(angle = 40, hjust = 1)) +
-  scale_fill_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) + 
-  scale_color_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) + 
-  ylab('log(DESeqII norm. counts)') + xlab('')
-ggsave('scripts/eric.data/covid.interesting.genes.dist.pdf', width = 3, height = 3)
-
-
-covid.patient.gene.norm.rmsk.gencode.counts %>% 
-  merge(te.families.clades, by = 'gene') %>% 
-  filter(clade %in% c('SINE', 'LTR', 'DNA', 'LINE')) %>% 
-  group_by(tsd, clade, patient, age) %>% 
-  summarize(average.count = mean(norm.counts)) %>% 
-  # filter(gene == 'HERVH-int') %>% 
-  ggplot(aes(tsd, log(average.count + 1), group = clade, color = clade)) + 
-  geom_point() + 
-  geom_line() + 
-  scale_color_viridis_d()
-
-covid.patient.gene.norm.rmsk.gencode.counts %>% 
-  distinct(patient, age, tsd) %>% 
-  ggplot(aes(age, tsd)) +
-  stat_smooth()
-
-covid.patient.gene.norm.rmsk.gencode.counts %>% 
-  filter(gene == 'HERVH-int') %>% 
-  ggplot(aes(age, norm.counts)) + 
-  geom_point() 
-```
-####
-```{r}
-gene.expression.hclust.plt <- function(gene.counts){
-  gene.counts %>% 
-    filter_at(vars(contains('covid.')), all_vars(. >= 10)) %>% 
-    gather(patient, count, -gene) %>% 
-    # merge(merged.patient.metadata %>% select(patient, batch), by.x = 'patient', by.y = 'patient') %>% 
-    # filter(!grepl('^MT', gene)) %>% 
-    mutate(count = log(count + 1),
-           count = scale(count, center = T)) %>% 
-    # unite('patient', c(patient, batch), sep = '_') %>% 
-    spread(patient, count) %>% 
-    column_to_rownames('gene') %>% 
-    pheatmap(treeheight_row = 10, treeheight_col = 10, show_rownames = F, color = viridis(32), width = 5, height = 3)
-}
-
-covid.patient.gene.norm.gencode.counts <- 
-  read_csv('scripts/eric.data/gene.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.counts.csv') %>% 
-  rename(gene = 'X1')
-
-covid.patient.gene.norm.rmsk.gencode.counts <-
-  read_csv('scripts/eric.data/gene.te.locus.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.counts.csv') %>% 
-  rename(gene = 'X1') 
-
-
-pheat.1 <- gene.expression.hclust.plt(covid.patient.gene.norm.rmsk.gencode.counts)
-
-save_pheatmap_pdf(x = pheat.1, 
-                  filename = 'scripts/eric.data/covid.hclust.count.filter.10.pdf')
-
-
-ggplot(covid.patient.gene.norm.rmsk.gencode.counts %>% 
-         filter(gene %in% c('CXCL8', 'IL7R', 'BRAF',
-                                                                                              'ZNF91', 'HERVH-int', 
-                                                                                              'KRAS', 'IFNA', 'L1HS')), 
-       aes(reorder(gene, -norm.counts), count, fill = type, color = type)) + 
-  geom_sina(alpha = 0.3, position = position_dodge(width = 1), size = rel(1.5)) + 
-  geom_boxplot(outlier.colour = NA, position = position_dodge(width = 1), fill = NA, size = rel(0.25)) + 
-  # theme(axis.text.x = element_text(angle = 40, hjust = 1)) + 
-  scale_fill_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) + 
-  scale_color_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) + 
-  ylab('DESeqII norm. counts') + xlab('')
-
-```
-####
-```{r}
-set.seed(234)
-### Gencode PCA
-gene.patient.normalized.counts.pca <-  
- covid.patient.gene.norm.rmsk.gencode.counts %>% 
-  # select(-gene, -biotype) %>% 
-  #filter_at(vars(contains('panc.')), all_vars(. >= 10)) %>% 
-  filter(!grepl('^RP|^MT', gene), ! gene %in% patient.plasma.quant$rfe.gender.profile$optVariables) %>%
-  # filter(gene %in% filter(panc1.intra.quant$de.seq$gencode.34.salmon.out, abs(log2FC) >= 3)$gene) %>%
-  #   mutate(gene.cv = rowSds(as.matrix(.[, -c(1)]))/rowMeans(.[,-c(1)])) %>%
-  mutate(gene.cv = rowSds(as.matrix(select(., contains('covid.'))))/rowMeans(select(., contains('covid.')))) %>%
-  filter(gene.cv <= 2) %>%
-  select(-gene.cv) %>%
-  column_to_rownames('gene') %>%
-  t() %>% 
-  as.data.frame() %>% 
-  prcomp(scale=T)
-
-summary(gene.patient.normalized.counts.pca)
-pcs.of.interest <- apply(gene.patient.normalized.counts.pca$x, 2, var)
-pcs.props <-  pcs.of.interest/sum(pcs.of.interest)
-cumsum(pcs.props)[1]
-
-as.data.frame(pcs.props) %>% 
-  rownames_to_column('pc') %>% 
-  mutate(pc = as.numeric(sub('PC', '', pc))) %>% 
-  ggplot(aes(pc, pcs.props)) + 
-  geom_col()
- 
-# convert output to dataframe
-pca.out <- as.data.frame(gene.patient.normalized.counts.pca$x) %>% 
-  rownames_to_column('patient') %>% 
-  merge(covid.patient.metadata, all.x = T) %>% 
-  merge(patient.metadata, all.x = T, by = 'patient') %>% 
-  mutate(gender.x = ifelse(is.na(gender.y), gender.x, gender.y),
-         age.x = ifelse(is.na(age.y), age.x, age.y),
-         condition = ifelse(is.na(condition), 'covid', condition))
-
-# summarize PC contributions
-pca.out.summary <- 
-  as.data.frame(summary(gene.patient.normalized.counts.pca)$importance) %>% 
-  rownames_to_column('metric') %>% 
-  gather(pc, value, -metric) %>% 
-  spread(metric, value)
-# summarize PC contributions
-pca.out.contributions <- 
-  as.data.frame(gene.patient.normalized.counts.pca$rotation) %>% 
-  rownames_to_column('tx') %>% 
-  gather(pc, contrib, -tx) %>% 
-  group_by(pc) %>% 
-  #merge(gencode.reference,
-  #      by.x = 'tx',
-  #      by.y = 'gene.name') %>% 
-  group_by(pc) %>% 
-  mutate(contrib = abs(contrib)) %>% 
-  filter(contrib > quantile(contrib, 0.95))
-
-# plot PC1 and PC2
-pca.out %>% 
-  rownames_to_column('sample') %>% 
-  #separate(sample, sep = '[.]', into = c(NA, 'condition', NA)) %>% 
-  ggplot(aes(PC1, PC2,
-             color = condition,
-             label = tsd)) + 
-    geom_point(size = rel(2)) + 
-    scale_size_continuous(range = c(0.1, 2.5), breaks = c(0,5,10,15,20)) + 
-    xlab(paste('PC1', round(cumsum(pcs.props)[1], digits = 3), sep = ' ')) +
-    ylab(paste('PC2', round(cumsum(pcs.props)[2] - cumsum(pcs.props)[1], 
-                            digits = 3), sep = ' ')) +
-    # scale_color_viridis_d(name = 'condition', alpha = 0.6) +   
-    scale_fill_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) + 
-    scale_color_manual(values = c(viridis(1)[[1]], viridis(3)[[2]])) + 
-    geom_vline(xintercept = 0, linetype = 'dotted', alpha = 0.3, size = 0.25) +
-    geom_hline(yintercept = 0, linetype = 'dotted', alpha = 0.3, size = 0.25) + 
-    theme(legend.position = 'right',
-            legend.key.width = unit(0.125,'cm'),
-            legend.key.height = unit(0.4, 'cm')) + 
-  geom_text_repel(color = 'black', size = rel(0.5))
-  
-ggsave('scripts/eric.data/covid.pca.pdf', width = 3, height = 3)
-
-
-# print top contibutors per PC
-pca.out.contributions %>%
-  group_by(pc) %>%
-  filter(pc %in% c("PC1","PC2")) %>% 
-  select(pc, contrib, tx) %>% 
-  mutate(contrib = abs(contrib)) %>% 
-  top_n(7, wt = abs(contrib)) %>% 
-  arrange(pc, -contrib)
-```
-####
-```{r}
-covid.patient.gene.norm.gencode.counts <- 
-  read_csv('scripts/eric.data/tx.te.locus.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.counts.csv') %>% 
-  rename(gene = 'X1') %>% 
-  separate(gene, sep = '\\|', into = c(NA,NA,NA,NA,'tx','gene','len','biotype')) #%>% 
-  merge(gen.34.tx.2.gene, by = 'tx', all.x = T) %>% 
-  merge(te.families.clades, by = 'tx', all.x = T) %>% 
-  mutate(biotype = ifelse(is.na(biotype), clade, biotype))
-
-  gen <- read_csv('scripts/eric.data/tx.te.locus.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.counts.csv') %>% 
-    rename(gene = 'X1') %>% 
-    filter_at(vars(contains('.')), any_vars(. >= 10)) %>% 
-    filter(grepl('^ENST', gene)) %>% 
-    separate(gene, sep = '\\|', into = c(NA,NA,NA,NA,'tx','gene','len','biotype'))
-  rmsk <- read_csv('scripts/eric.data/tx.te.locus.gencode.34.salmon.out.covid.covid.v.ctrl.de-seq.counts.csv') %>% 
-    rename(gene = 'X1') %>% 
-    filter_at(vars(contains('.')), any_vars(. >= 10)) %>% 
-    filter(!grepl('^ENST', gene)) %>% 
-    separate(gene, sep = '_', into = c(NA, NA, 'gene', 'position', NA, NA, 'strand', NA)) %>% 
-    mutate(position = sub('range=', '', position),
-           strand = sub('strand=', '', strand)) %>% 
-    merge(te.families.clades %>% distinct(), by = 'gene') %>% 
-    mutate(tmp.gene = gene) %>% 
-    unite('tx', c(gene, position, strand), sep = '_') %>% 
-    select(tx, 'gene' = tmp.gene, 'len' = clade, 'biotype' = family, everything())
-    
-covid.tx <- rbind(gen, rmsk)
-
-biotype.dist.plt(tx.counts = covid.tx, control = 'ctrl', treatment = 'covid')
-
-ggsave('scripts/eric.data/covid.biotype.dist.pdf', width = 5, height = 3)
-
-```
-####
-```{r}
-trono.znf.targets <- read_csv('scripts/eric.data/all.znf.te.score.csv') %>% 
-  gather(target, score, -X1) %>% 
-  rename(gene = 'X1') %>% 
-  filter(gene %in% filter(covid.test.de, log2FoldChange >= 1)$gene,
-         score > 0) %>% 
-  arrange(-score) %>% 
-  separate(target, sep = '/', into = c('clade', 'family', 'te')) %>% 
-  filter(te %in% filter(covid.test.te.de, log2FoldChange >= 1)$gene) %>% 
-  merge(covid.test.te.de, by.x = 'te', by.y = 'gene') %>% 
-  merge(covid.test.de, by.x = 'gene', by.y = 'gene') %>% 
-  select(gene, te, clade, family, score, te.de='log2FoldChange.x', gene.de='log2FoldChange.y')
-
-
-ggplot(trono.znf.targets %>% 
-         group_by(gene) %>% 
-         filter(score == max(score)), 
-       aes(te.de, gene.de, label = paste(gene, te, clade, family, sep = '-'))) + 
-  geom_point() + 
-  geom_text_repel()
-```
 
 
 
