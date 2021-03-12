@@ -49,7 +49,6 @@ suppressPackageStartupMessages({
   library(rjson)
   library(HDF5Array)
   library(DESeq2)
-  # library(edgeR)
   library(ggpmisc)
   library(sva)
 })
@@ -896,6 +895,54 @@ build.signature.lists <- function(){
               'g2m' = g2m.signature_list, 
               'g12c' = g12c.signature_list))
 }
+
+build.de.agreement.lists <- function(exoTIC_2D, rnaEasy_2D, rnaEasy_3D){
+  
+  exoTIC_2D %>% 
+    merge(rnaEasy_2D, by = 'gene') %>% 
+    merge(rnaEasy_3D, by = 'gene') %>% 
+    filter(log2FoldChange.x >= 1 & log2FoldChange.y >= 1 & log2FoldChange >= 1) %>% 
+    select(gene) %>% 
+    unlist() %>% unname() -> up.consensus.tmp
+  
+  exoTIC_2D %>% 
+    merge(rnaEasy_2D, by = 'gene') %>% 
+    merge(rnaEasy_3D, by = 'gene') %>% 
+    filter(log2FoldChange.x <= -1 & log2FoldChange.y <= -1 & log2FoldChange <= -1) %>% 
+    select(gene) %>% 
+    unlist() %>% unname() -> dn.consensus.tmp
+  
+  exoTIC_2D %>% 
+    merge(rnaEasy_2D, by = 'gene') %>% 
+    filter(log2FoldChange.x >= 1 & log2FoldChange.y >= 1) %>% 
+    select(gene) %>% 
+    unlist() %>% unname() -> up.two_D.tmp
+    
+  exoTIC_2D %>% 
+    merge(rnaEasy_2D, by = 'gene') %>% 
+    filter(log2FoldChange.x <= -1 & log2FoldChange.y <= -1) %>% 
+    select(gene) %>% 
+    unlist() %>% unname() -> dn.two_D.tmp
+  
+  rnaEasy_2D %>% 
+    merge(rnaEasy_3D, by = 'gene') %>% 
+    filter(log2FoldChange.x >= 1 & log2FoldChange.y >= 1) %>% 
+    select(gene) %>% 
+    unlist() %>% unname() -> up.rnaEasy.tmp
+  
+  rnaEasy_2D %>% 
+    merge(rnaEasy_3D, by = 'gene') %>% 
+    filter(log2FoldChange.x <= -1 & log2FoldChange.y <= -1) %>% 
+    select(gene) %>% 
+    unlist() %>% unname() -> dn.rnaEasy.tmp
+  
+  return(list('up.consensus' = up.consensus.tmp,
+              'up.rnaEasy' = up.rnaEasy.tmp,
+              'up.twoD' = up.two_D.tmp,
+              'dn.consensus' = dn.consensus.tmp,
+              'dn.rnaEasy' = dn.rnaEasy.tmp,
+              'dn.twoD' = dn.two_D.tmp))
+}
 ```
 ### CALL: build.signature.lists
 ```{r}
@@ -910,8 +957,11 @@ salmon.quant$rnaEasy_3D$deseq$signatures <-
 
 
 signature.list <- build.signature.lists()
-
-signature.list$myc$consensus
+  
+  
+de.agreement.list <- build.de.agreement.lists(salmon.quant$exoTIC_2D$deseq$de,
+                                          salmon.quant$rnaEasy_2D$deseq$de,
+                                          salmon.quant$rnaEasy_3D$deseq$de)
 
 ```
 ## FUN: rerwip create.tcga.obj
@@ -971,17 +1021,21 @@ if (! file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv')
 }
 
 
+anno_colors <- list(
+  sample_type = c(`Solid Tissue Normal` = 'white', `Primary Tumor` = 'black'),
+  KRAS = c(G12C = 'blue', otherMut = 'orange'),
+  TP53 = c(Mut = 'purple', WT = 'green')
+)
+
 norm.counts.final %>% 
-  filter(gene %in% c(signature.list$myc$consensus,
-                     signature.list$e2f$consensus,
-                     signature.list$g2m$consensus)) %>% 
+  filter(gene %in% c(de.agreement.list$dn.twoD)) %>% 
   select(sample, count, gene) %>% 
   mutate(count = log(count + 1),
          count = scale(count, center = T)) %>% 
   pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
   column_to_rownames('sample') %>% 
-  t() %>% as.data.frame() #%>% 
-  pheatmap(show_rownames = T, show_colnames = F, 
+  t() %>% as.data.frame() %>% 
+  pheatmap(show_rownames = T, show_colnames = F, annotation_colors = anno_colors,
            annotation_col = luad.phenotypes.merge %>% 
              select(sample, sample_type, KRAS, TP53) %>% 
              mutate(KRAS = paste(KRAS), TP53 = paste(TP53)) %>% 
@@ -996,9 +1050,8 @@ myc.avg.counts.tidy.stratified <-
   norm.counts.final %>%
   # filter(! sample %in% c('TCGA-44-2656-01', 'TCGA-44-2668-01',
   #                                   'TCGA-44-3917-01', 'TCGA-44-3918-01', 'TCGA-44-5645-01', 'TCGA-44-6775-01')) %>%
-  filter(sample_type == 'Primary Tumor',
-         grepl('G12C', KRAS)) %>%
-  filter(gene %in% signature.list$g2m$twoD) %>%
+  filter(sample_type == 'Primary Tumor') %>%
+  filter(gene %in% de.agreement.list$consensus) %>%
   select(sample, count) %>% 
   group_by(sample) %>%
   summarize(avg.count = mean(count)) %>%
@@ -1029,158 +1082,44 @@ ggsurvplot(surv.fit,
 # panel.save(figure = 4, name = 'tcag.paad.myc.gene.set.km', height = 'single', width = 'single')
 
 ```
-### classify tcga on plasma features
-```{r}
-set.seed(456)
 
-opt.var.toil.count <- toil.quant$norm.counts.tidy.z.scores %>% 
-  filter(gene %in% patient.plasma.quant$rfe.condition.profile$optVariables) %>% 
-  # filter(gene %in% c('KRAS', "ETS1", "FOS", 
-  #                    "JUNB", "NFKB1", "ETV4",
-  #                    "LINC01670", "LINC00294","AC010531.1")) %>% 
-  select(gene, sample, count, type) %>%
-  mutate(count = log(count + 1)) %>% 
-  spread(gene, count) %>% 
-  #filter(type %in% c('Primary Tumor', 'Normal Tissue')) %>% 
-  mutate(type = sub(' ', '_', type)) %>% 
-  column_to_rownames('sample')
-
-split_idx <- createDataPartition(opt.var.toil.count$type, p = 0.75, list = F)
-
-split_train <- opt.var.toil.count[split_idx, ]
-split_test <- opt.var.toil.count[-split_idx, ]
-
-default_glm_mod = train(
-  form = type ~ .,
-  data = split_train,
-  trControl = trainControl(method = "cv", number = 5,
-                           savePredictions = T, classProbs = T),
-  method = "glm",
-  family = "binomial", 
-  maxit = 150
-)
-
-calc_acc = function(actual, predicted) {
-  print(paste0('Actual - Predicted (Accuracy) = ', mean(actual == predicted)))
-}
-
-calc_acc(actual = split_test$type,
-         predicted = predict(default_glm_mod, newdata = split_test))
-
-confusionMatrix(predict(default_glm_mod, newdata = split_test, type = 'prob'), )
-
-
-
-plot.roc(default_glm_mod$pred$obs, default_glm_mod$pred$Primary_Tumor)
-
-ggplot(default_glm_mod$pred, 
-       aes(m = Primary_Tumor, d = factor(obs, levels = c("Normal_Tissue", "Primary_Tumor")))) + 
-    geom_roc(hjust = -0.4, vjust = 1.5) + xlim(0,0.25)
-
-summary(default_glm_mod)
-
-predict(default_glm_mod, newdata = split_test, type = 'prob')
-
-tot.var.count <- toil.quant$norm.counts.tidy.z.scores %>% 
-  filter(gene %in% patient.plasma.quant$de.seq$gencode.34.salmon.out$gene) %>% 
-  select(gene, sample, count, type) %>%
-  mutate(count = log(count + 1)) %>% 
-  spread(gene, count) %>% 
-  filter(type %in% c('Primary Tumor', 'Normal Tissue')) %>% 
-  column_to_rownames('sample')
-
-tot.var.split <- createDataPartition(tot.var.count$type, p = 0.75, list = F)
-tot.var_train <- opt.var.toil.count[tot.var.split, ]
-tot.var_test <- opt.var.toil.count[-tot.var.split, ]
-
-tot.var.x <- tot.var_train %>% select(-type) %>% as.matrix()
-tot.var.y <- tot.var_train %>% select(type) %>% mutate(type = ifelse(grepl('Normal', type), 0, 1)) %>% as.matrix()
-
-type <- 'auc'
-cv.fit <- cv.glmnet(tot.var.x, tot.var.y, family="binomial", type.measure = type, keep = TRUE)
-plot(cv.fit)
-
-min.ind <- which(cv.fit$lambda == cv.fit$lambda.min)
-pred <- expit(cv.fit$fit.preval[,min.ind])
-
-fitted.roc <- roc(tot.var.y,pred)
-plot(fitted.roc)
-
-lm(tot.var.y~pred-1)
-
-```
 ### boehmke classifier
 ```{r}
 set.seed(123)
 
-salmon.quant$panc_v_ctrl$rfe.condition.profile$optVariables %>% 
-  as.tibble() %>% 
-  select(ensg = value) %>% 
-  merge(gencode.35.tx.to.gene %>% select(ensg, gene), by = 'ensg') %>% 
-  distinct() -> panc_v_ctrl_features
-
-
-toil.quant$norm.counts.tidy %>% 
-  # filter(gene %in% patient.plasma.quant$de.seq$gencode.34.salmon.out$gene) %>% 
-  filter(gene %in% filter(salmon.quant$panc_v_ctrl$deseq$de, log2FoldChange <= -1)$gene) %>%
-  select(gene, sample, count, type) %>%
-  # filter(gene %in% panc_v_ctrl_features$gene) %>% 
-  filter(type %in% c('Primary Tumor', 'Normal Tissue')) %>% 
-  mutate(type = as.factor(ifelse(type == 'Normal Tissue', 0, 1))) %>% 
-  # spread(gene, count) %>% 
+norm.counts.final %>% 
+  filter(gene %in% c(de.agreement.list$up.consensus,
+                     de.agreement.list$up.rnaEasy,
+                     de.agreement.list$up.twoD)) %>% 
+  select(gene, sample, count, KRAS) %>%
+  # mutate(sample_type = as.factor(ifelse(sample_type == 'Solid Tissue Normal', 0, 1))) %>% 
+  mutate(sample_type = as.factor(ifelse(grepl('G12|G13', KRAS), 1, 0))) %>% select(-KRAS) %>% 
+  filter(sample != 'TCGA-44-3917-01') %>% 
+  mutate(count = log(count + 1)) %>% 
   pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
   column_to_rownames('sample') %>% 
-  initial_split(prop = .75, strata = 'type') -> toil.init.split
+  initial_split(prop = .60, strata = 'sample_type') -> toil.init.split
 
-toil.quant$norm.counts.tidy %>% 
-  # filter(gene %in% patient.plasma.quant$de.seq$gencode.34.salmon.out$gene) %>% 
-  # filter(gene %in% filter(salmon.quant$panc_v_ctrl$deseq$de, log2FoldChange <= -1)$gene) %>% 
-  select(gene, sample, count, type) %>%
-  filter(type %in% c('Primary Tumor', 'Normal Tissue'),
-         gene %in% colnames(toil.small.n.train)) %>% 
-  mutate(type = as.factor(ifelse(type == 'Normal Tissue', 0, 1))) %>% 
-  # spread(gene, count) %>% 
-  pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
-  column_to_rownames('sample') -> training.data
-
-  
 toil.train.split <- training(toil.init.split)
 toil.test.split <- testing(toil.init.split)
 
-salmon.quant$panc_v_ctrl$deseq$counts %>%
-  # filter(gene %in% panc_v_ctrl_features$gene) %>%
-  select(-ensg) %>% 
-  # filter(gene %in% colnames(toil.train.split)) %>%
-  # rownames_to_column('gene') %>%
-  # filter_at(vars(contains('.')), all_vars(. >= 1)) %>%
-  filter(gene %in% filter(salmon.quant$panc_v_ctrl$deseq$de, log2FoldChange <= -1)$gene) %>%
-  gather(patient, count, -gene) %>%
-  merge(current.meta.data %>% select(patient, condition) %>% filter(condition %in% c('ctrl', 'panc'))) %>%
-  distinct() %>%
-  mutate(type = as.factor(ifelse(condition == 'ctrl', 0, 1))) %>%
-  select(patient, gene, count, type) %>%
-  # merge(gencode.35.tx.to.gene %>% select(gene, ensg), by = 'ensg') %>%
-  distinct() %>%
-  # select(gene, count, patient, type) %>%
-  pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
-  column_to_rownames('patient') -> toil.small.n.train
+toil.train.split %>% 
+  select(sample_type) %>% 
+  # distinct() %>% 
+  table()
 
 norm_model <- train(
-  type ~ .,
+  sample_type ~ .,
   data = toil.train.split,
-  # data = toil.small.n.train,
   method = 'glm',
   family = 'binomial',
   preProc = c('zv', 'center', 'scale'),
   trControl = trainControl(method = 'cv', number = 10)
 )
 
-#modelLookup('glm')
-
 penalized_model <- train(
-  type ~ .,
+  sample_type ~ .,
   data = toil.train.split,
-  # data = toil.small.n.train,
   method = 'glmnet',
   family = 'binomial',
   preProc = c('zv', 'center', 'scale'),
@@ -1190,21 +1129,15 @@ penalized_model <- train(
 
 penalized_curve <- caret::learning_curve_dat(
   dat = toil.train.split,
-  # dat = toil.small.n.train,
-  outcome = 'type',
-  # proportion = 1,
+  outcome = 'sample_type',
   test_prop = 1/4,
   method = 'glmnet',
   family = 'binomial',
   preProc = c('zv', 'center', 'scale'),
-  # trControl = trainControl(method = 'cv', number = 10),
-  # tuneLength = 10
 )
-
 
 vip(norm_model)
 
-vip::vi(penalized_model)
 vip(penalized_model)
 
 ggplot(penalized_curve, aes(x = Training_Size, y = Accuracy, color = Data)) + 
@@ -1212,41 +1145,45 @@ ggplot(penalized_curve, aes(x = Training_Size, y = Accuracy, color = Data)) +
 
 summary(resamples(list(reg = norm_model,
                       pen = penalized_model)))$statistics$Accuracy
+
 #####
 norm_pred <- predict(norm_model, toil.test.split)
 
-confusionMatrix(data = relevel(norm_pred, ref = '1'),
-                reference = relevel(toil.test.split$type, ref = '1'))
+confusionMatrix(data = relevel(norm_pred, ref = "1"),
+                reference = relevel(toil.test.split$sample_type, ref = '1'))
+
 
 penalized_pred <- predict(penalized_model, toil.test.split)
 
 confusionMatrix(data = relevel(penalized_pred, ref = '1'),
-                reference = relevel(toil.test.split$type, ref = '1'))
+                reference = relevel(toil.test.split$sample_type, ref = '1'))
 #####
-norm_pred <- predict(norm_model, training.data)
 
-confusionMatrix(data = relevel(norm_pred, ref = '1'),
-                reference = relevel(training.data$type, ref = '1'))
+salmon.quant$deseq$counts %>% 
+  select(-contains('exoTIC.3D'), -ensg) %>% 
+  filter(gene %in% colnames(toil.train.split)) %>% 
+  column_to_rownames('gene') %>% 
+  t() %>% as.data.frame() %>% 
+  rownames_to_column('sample') %>% 
+  mutate(sample_type = as.factor(ifelse(grepl('DMSO', sample), 1, 0))) %>% 
+  column_to_rownames('sample') -> exRNA.test
 
-penalized_pred <- predict(penalized_model, training.data)
+norm_pred <- predict(norm_model, exRNA.test)
+
+confusionMatrix(data = relevel(norm_pred, ref = "1"),
+                reference = relevel(exRNA.test$sample_type, ref = '1'))
+
+
+penalized_pred <- predict(penalized_model, exRNA.test)
 
 confusionMatrix(data = relevel(penalized_pred, ref = '1'),
-                reference = relevel(training.data$type, ref = '1'))
+                reference = relevel(exRNA.test$sample_type, ref = '1'))
 
-#####
-norm_validation <- predict(norm_model, toil.small.n.train)
+####
 
-confusionMatrix(data = relevel(norm_validation, ref = '1'),
-                reference = relevel(toil.small.n.train$type, ref = '1'))
-
-penalized_validation <- predict(penalized_model, toil.small.n.train)
-
-confusionMatrix(data = relevel(penalized_validation, ref = '1'),
-                reference = relevel(toil.small.n.train$type, ref = '1'))
-#####
-predict(penalized_model, toil.small.n.train, type = 'prob') %>% 
+predict(penalized_model, toil.test.split, type = 'prob') %>% 
   select(`1`) %>%
-  prediction(., toil.small.n.train$type) %>% 
+  prediction(., toil.test.split$sample_type) %>% 
   performance(measure = 'tpr', x.measure = 'fpr') -> penalized_performance
 
 penalized_performance_df <- data_frame('fpr' = unlist(penalized_performance@x.values), 
@@ -1256,80 +1193,7 @@ penalized_performance_df %>%
   ggplot(aes(fpr, tpr)) + 
     geom_line()
 
-
-merge(patient.plasma.quant$de.seq$gencode.34.salmon.out, panc1.intra.quant$de.seq$gencode.34.salmon.out, by = 'gene') %>% 
-  filter(gene %in% patient.plasma.quant$rfe.condition.profile$optVariables) %>% 
-  ggplot(aes(log2FoldChange.x, log2FoldChange.y, label = gene)) + 
-  geom_point() + 
-  geom_text()
-
-# norm_pred <- predict(norm_model, toil.total.test)
-# 
-# confusionMatrix(data = relevel(norm_pred, ref = '1'),
-#                 reference = relevel(toil.total.test$type, ref = '1'))
-# 
-# penalized_pred <- predict(penalized_model, toil.total.test)
-
-# confusionMatrix(data = relevel(penalized_pred, ref = '1'),
-#                 reference = relevel(toil.total.test$type, ref = '1'))
-
-
-# toil.quant$norm.counts.tidy.z.scores %>% 
-#   # filter(gene %in% patient.plasma.quant$rfe.kras.sig.condition.profile$optVariables) %>%
-#   filter(gene %in% filter(panc1.intra.quant$de.seq$gencode.34.salmon.out, log2FoldChange < -1)$gene) %>%
-#   # filter(gene %in% patient.plasma.quant$rfe.lnc.condition.profile$optVariables) %>%
-#   # filter(gene %in% gen.34.lnc.names$gene, 
-#   #        gene %in% filter(patient.plasma.quant$de.seq$gencode.34.salmon.out, log2FoldChange > 1)$gene) %>% 
-#   filter(gene %in% filter(patient.plasma.quant$de.seq$gencode.34.salmon.out, log2FoldChange > 1)$gene)  %>%
-#   select(gene, sample, count, type) %>%
-#   filter(type %in% c('Primary Tumor', 'Normal Tissue')) %>% 
-#   mutate(type = as.factor(ifelse(type == 'Normal Tissue', 0, 1))) %>% 
-#   spread(gene, count) %>% 
-#   column_to_rownames('sample') %>% 
-#   initial_split(prop = .6, strata = 'type') -> toil.init.split
-#   
-# toil.train.split <- training(toil.init.split)
-# toil.test.split <- testing(toil.init.split)  
-# 
-# norm_model <- train(
-#   type ~ .,
-#   data = toil.train.split,
-#   method = 'glm',
-#   family = 'binomial',
-#   preProc = c('zv', 'center', 'scale'),
-#   trControl = trainControl(method = 'cv', number = 10)
-# )
-# 
-# penalized_model <- train(
-#   type ~ .,
-#   data = toil.train.split,
-#   method = 'glmnet',
-#   family = 'binomial',
-#   preProc = c('zv', 'center', 'scale'),
-#   trControl = trainControl(method = 'cv', number = 10),
-#   tuneLength = 10
-# )
-# 
-# summary(resamples(list(reg = norm_model,
-#                       pen = penalized_model)))$statistics$Accuracy
-# 
-# vip(norm_model, all_permutations = T, bar = T)
-# vip(penalized_model, all_permutations = T, bar = T, jitter = T)
-# 
-# norm_pred <- predict(norm_model, toil.test.split)
-# 
-# confusionMatrix(data = relevel(norm_pred, ref = '1'),
-#                 reference = relevel(toil.test.split$type, ref = '1'))
-# 
-# penalized_pred <- predict(penalized_model, toil.test.split)
-# 
-# confusionMatrix(data = relevel(penalized_pred, ref = '1'),
-#                 reference = relevel(toil.test.split$type, ref = '1'))
-
-
 ```
-
-
 ### Tx coverage
 ```{r}
 salmon.quant$rnaEasy_all$deseq$tx.cov <- tx.ome.cov.plt(salmon.quant$rnaEasy_all$deseq$txi.counts)
@@ -1422,7 +1286,6 @@ biotype.dist.plt <- function(tx.biotype.dist){
 salmon.quant$rnaEasy_all$deseq$biotype.dist <- biotype.dist(salmon.quant$rnaEasy_all$deseq$txi.counts)
 
 biotype.dist.plt(salmon.quant$rnaEasy_all$deseq$biotype.dist)
-
 
 ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$biotype.dist <-
   tot.biotype.dist(ucsc.rmsk.salmon.quant$rnaEasy_all$deseq$txi.counts)
@@ -1916,8 +1779,8 @@ te.de.volcano(ucsc.rmsk.salmon.quant$rnaEasy_3D$deseq$de %>% mutate(log2FoldChan
 
 te.de.volcano(ucsc.rmsk.salmon.quant$panc_v_covid$deseq$de)
 
-ucsc.rmsk.salmon.quant$sars_v_mock$deseq$de %>% mutate(log2FoldChange = -log2FoldChange) %>% 
-  merge(ucsc.rmsk.salmon.quant$covid_v_ctrl$deseq$de, by = 'gene', all = T) %>% 
+ucsc.rmsk.salmon.quant$rnaEasy_3D$deseq$de %>% 
+  merge(ucsc.rmsk.salmon.quant$exoTIC_2D$deseq$de, by = 'gene', all = T) %>% 
     filter(!grepl('^MT', gene)) %>% 
   merge(te.families.clades, by = 'gene', all.x = T) %>% 
   mutate(clade = ifelse(gene %in% gencode.35.lnc.gene.names$gene, 'lncRNA', clade),
@@ -1926,10 +1789,10 @@ ucsc.rmsk.salmon.quant$sars_v_mock$deseq$de %>% mutate(log2FoldChange = -log2Fol
   filter(clade %in% c('SINE', 'LTR', 'DNA', 'LINE')) %>% 
   ggplot(aes(log2FoldChange.x, log2FoldChange.y, color = clade)) + 
   geom_point() +
-  # geom_text_repel(aes(label = ifelse(abs(log2FoldChange.x) > 1 & abs(log2FoldChange.y) > 1, gene, ''))) +
-  geom_text_repel(aes(label = gene)) + 
+  xlab('rnaEasy_3D') + ylab('exoTIC_2D') +
   scale_color_viridis_d(direction = -1) +
-  geom_hline(yintercept = 0) + geom_vline(xintercept = 0) +
+  geom_vline(xintercept = 0, linetype = 'dashed', alpha = 0.4) +
+  geom_hline(yintercept = 0, linetype = 'dashed', alpha = 0.4) +
   facet_wrap(~clade, nrow = 2, ncol = 2, shrink = T)
 
 ucsc.rmsk.salmon.quant$panc_v_ctrl$deseq$de %>% mutate(log2FoldChange = -log2FoldChange) %>% 
