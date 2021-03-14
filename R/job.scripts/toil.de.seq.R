@@ -38,7 +38,6 @@ suppressPackageStartupMessages({
   library(HDF5Array)
   library(DESeq2)
   library(ggpmisc)
-  library(sva)
 })
 suppressMessages(loadfonts())
 
