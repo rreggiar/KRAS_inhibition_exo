@@ -546,38 +546,6 @@ unsplice.df %>%
   geom_sina()
 
 ```
-### CALL: combat.batch effect
-```{r}
-metadata.df %>% mutate_if(is.character, as.factor)-> pheno
-
-model.matrix(~as.factor(batch), data = pheno) -> mod
-model.matrix(~1, data = pheno) -> mod_0
-
-edata <- data.matrix(assay(salmon.quant$gxi, 'counts') %>%
-                      as.data.frame() %>%
-                      rownames_to_column('gene') %>%
-                      filter_at(vars(contains('.')), all_vars(. >= 5)) %>%
-                      select(-gene)) %>% as.matrix()
-
-n.sv <- num.sv(edata, mod, method = 'leek')
-n.sv
-
-svobj <- sva(edata, mod, mod_0, n.sv=6)
-svobj$sv
-
-pValues = f.pvalue(edata,mod,mod_0)
-qValues = p.adjust(pValues,method="BH")
-
-modSv = cbind(mod,svobj$sv)
-mod0Sv = cbind(mod_0,svobj$sv)
-pValuesSv = f.pvalue(edata,modSv,mod0Sv)
-qValuesSv = p.adjust(pValuesSv,method="BH")
-qValuesSv
-pValuesSv
-modSv
-
-cbind(metadata.df, modSv) %>% rename('names' = 'sample') -> batch.annotation
-```
 ## FUN: plot tx count
 ```{r}
 tx.ome.cov.plt <- function(tx.counts){
@@ -596,7 +564,6 @@ tx.ome.cov.plt <- function(tx.counts){
     mutate(coverage = biotype.count/n) 
 }
 ```
-
 ## FUN: run.de.seq
 ```{r}
 run.de.seq <- function(tximeta.object){
@@ -789,19 +756,6 @@ ucsc.rmsk.salmon.quant$deseq <- run.de.seq(ucsc.rmsk.salmon.quant)
 
 
 ```
-## CALL: tmm.norm
-```{r}
-
-salmon.quant$rnaEasy_all$tmm.counts <- 
-  edgeR::calcNormFactors(assay(salmon.quant$rnaEasy_all$gxi, 'counts') %>% 
-    as.data.frame() %>% 
-    rownames_to_column('gene') %>% 
-    mutate_if(is.numeric, round) %>% 
-    column_to_rownames('gene'), method = 'TMM')
-
-edgeR::cp
-```
-
 ## FUN: elbow.plt
 ```{r}
 elbow.plt <- function(df){
@@ -1060,7 +1014,7 @@ de.agreement.list <- build.de.agreement.lists(salmon.quant$exoTIC_2D$deseq$de,
 ## FUN: rerwip create.tcga.obj
 ```{r}
 
-if (! file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv'))){
+if (!file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv'))){
     
   toil.survival <- read_tsv(file.path(output.data.dir, 'tcga.data/TCGA-LUAD.survival.tsv.gz')) 
   
@@ -1111,14 +1065,17 @@ if (! file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv')
     merge(luad.phenotypes.merge, by = 'sample') %>% 
     distinct()
   
-  write_tsv(norm.counts.final %>% 
-    file = file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv'))
+  write_tsv(norm.counts.final, file = file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv'))
   
+} else if (file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv'))) {
+  norm.counts.final <- read_tsv(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv'))
 }
 
 
   
-
+if (!file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv'))){
+  print('hi')
+}
 
 anno_colors <- list(
   # sample_type = c(`Solid Tissue Normal` = 'white', `Primary Tumor` = 'black'),
@@ -1148,26 +1105,54 @@ norm.counts.final %>%
            legend_breaks = c(seq(-4,5,1)),
            annotation_col = luad.phenotypes.merge %>% select(sample, KRAS) %>% 
              distinct() %>% filter(KRAS %in% c('p.G12C', 'WT_normal')) %>% 
-             filter(sample != 'TCGA-44-3917-01') %>% column_to_rownames('sample')) -> g12.v.healthy.for.reem.pdf
-
-save_pheatmap_pdf(g12.v.healthy.for.reem.pdf, filename = file.path(output.data.dir, 'g12.v.healthy.for.reem.pdf.pdf'), 
-                  width = panel.figure.width.in*1.5, height = panel.figure.height.in/3)
-
-
-  
+             filter(sample != 'TCGA-44-3917-01') %>% column_to_rownames('sample'))
 
 norm.counts.final %>% 
   filter(gene %in% c(de.agreement.list$up.consensus)) %>%
   mutate(gene.set = 'up.consensus') %>%
-  mutate(KRAS = ifelse(grepl('p.G', KRAS), 'G12/3', KRAS)) %>% 
-  group_by(KRAS) %>% 
-  filter(n() >= length(de.agreement.list$up.consensus)*3) %>%
+  filter(KRAS %in% c('p.G12C', 'WT_normal')) %>% 
   group_by(sample, KRAS) %>% 
   summarize(score = mean(count)) %>% 
-  ggplot(aes(reorder(KRAS, -score), score)) +  
+  ggplot(aes(reorder(KRAS, -score), score)) +
+  xlab('') +
   geom_boxplot() + 
-  geom_sina()
+  geom_sina() +
+  stat_pvalue_manual(perm.p.df, y.position = 13.5)
+  
+  
+t.test(score ~ factor(KRAS), data = tmp.df)$estimate
 
+broom::glance(t.test(score ~ factor(KRAS), data = tmp.df))
+
+tmp.df %>% 
+  mutate(KRAS = factor(KRAS, levels = c('WT_normal', 'p.G12C'))) %>% 
+  modelr::permute(1000, score) %>% 
+  mutate(models = map(perm, ~t.test(score ~ KRAS, data = .))) %>% 
+  mutate(tidy = map(models, broom::glance)) %>% 
+  unnest(tidy) -> permuted
+
+observed <- broom::glance(t.test(score ~ factor(KRAS), data = tmp.df, alternative = 'greater'))$estimate
+
+ggplot(permuted, aes(x = estimate)) + 
+  geom_histogram() + 
+  geom_vline(xintercept = observed)
+
+perm.p <- (sum(abs(permuted$estimate) > ifelse(observed > 0, observed, -observed)) + 1) / (1000+1)
+
+perm.p.df <- as_tibble(x = list('group1' = 'p.G12C', 'group2' = 'WT_normal', 'p' = round(perm.p, digits = 4)))
+
+abs(permuted$estimate) > .45
+
+p.est <- 1
+for (value in permuted$estimate){
+  if (abs(value) > observed){
+    p.est <<- p.est + 1
+  }
+}
+p.est/10001
+
+
+broom::glance()
 set.seed(1241)
 
 myc.avg.counts.tidy.stratified <-
@@ -1209,58 +1194,55 @@ panel.save(figure = 'supplement', name = 'luad.survival.for.reem', height = 'sin
 ```
 ## FUN: toil.de.seq
 ```{r}
+
+## read in toil rsem counts (log21p)
 toil.expected.counts <- read.delim(file.path(output.data.dir, 'tcga.data', 'TcgaTargetGtex_gene_expected_count.gz')) %>%
   select(sample, contains('TCGA')) 
-
+## convert from wide to long
 toil.expected.counts %>%
   rename(sample = 'ensg') %>% 
   gather(sample, count, -ensg) -> toil.expected.counts.tidy
-
+## subset phenotype df to only the samples of interest
 luad.phenotypes.merge %>% filter(KRAS %in% c('p.G12C', 'WT_normal')) -> luad.kras.merge
-
+## merge in phenotype columns
 toil.expected.counts.tidy %>% 
   mutate(sample = gsub(sample, pattern = '[.]', replacement = '-')) %>% 
   merge(luad.kras.merge, by = 'sample') %>% 
   distinct() -> toil.expected.counts.tidy.merge
-
+## merge in gene names for interpretability
 toil.expected.counts.final <- 
   toil.expected.counts.tidy.merge %>% 
   merge(gen.24.names, by = 'ensg') %>%
   select(-ensg)
-
+## generate DESeq compatible colData
 toil.expected.counts.final %>% 
   select(sample, sample_type, KRAS) %>% 
   distinct() -> toil.expected.counts.coldata
-
+## convert back to wide, undo log transform 
+### RERWIP across(where()) seems awfully slow..
 toil.expected.counts.final %>% 
   select(sample, gene, count) %>% 
   pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
-  mutate(across(where(is.numeric), round)) -> toil.expected.counts.matrix
-
-toil.expected.counts.final %>% 
-  select(sample, gene, count) %>% 
-  pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
-  mutate(across(where(is.numeric), ~round((2^.) - 1))) -> toil.expected.counts.unlog..matrix
-
-toil.expected.counts.unlog..matrix %>% column_to_rownames('sample') %>% 
+  mutate(across(where(is.numeric), ~round((2^.) - 1))) -> toil.expected.counts.unlog.matrix
+## transpose matrix to match DESeq expectations
+toil.expected.counts.unlog.matrix %>% column_to_rownames('sample') %>% 
   t() %>% as.data.frame() -> toil.expected.counts.matrix.t
-
+## create DESeq object with colData and counts
 toil.dds <- DESeqDataSetFromMatrix(countData = toil.expected.counts.matrix.t,
                                    colData = toil.expected.counts.coldata,
                                    design = ~KRAS)
-
+## filter by suggested abundance threshold
 toil.dds.keep <- rowSums(counts(toil.dds)) >= 10
 toil.dds <- toil.dds[toil.dds.keep,]
-
-
+## DESeq
 toil.dds <- DESeq(toil.dds)
-
+## available comparisons
 print(resultsNames(toil.dds))
-
+## chosen comparison
 print(tail(resultsNames(toil.dds), n=1))
-
+## MA plot to assess health of model
 plotMA(lfcShrink(toil.dds, coef = tail(resultsNames(toil.dds), n=1)))
-
+## shrink, parse, and export DE results
 kras_wt.vs.g12c_de <- lfcShrink(toil.dds, coef = tail(resultsNames(toil.dds), n=1)) %>% 
   as.data.frame() %>% 
   filter(padj <= 0.05) %>% 
@@ -1635,7 +1617,7 @@ salmon.quant$three_D$deseq$de %>%
     geom_hline(yintercept = 0, linetype = 'dashed', alpha=0.2) + 
     geom_vline(xintercept = 0, linetype = 'dashed', alpha=0.2)
 
-salmon.quant$exoTIC_2D$deseq$de %>% 
+salmon.quant$exoTIC_3D$deseq$de %>% 
   # filter(gene %in% g12c.marker.genes$suppressed) %>% 
   merge(kras_wt.vs.g12c_de, by = 'gene') %>% 
   mutate(biotype = ifelse(gene %in% gencode.35.lnc.gene.names$gene, 'lncRNA','coding')) %>% 
@@ -2171,12 +2153,12 @@ rnaEasy.amg.nanosight.plt #+ rnaEasy.dmso.nanosight.plt
 ### GSEA Heatmaps
 ```{r}
 
-salmon.quant$exoTIC_2D$deseq$H.fgsea %>%
+salmon.quant$rnaEasy_2D$deseq$H.fgsea %>%
+  # select(pathway, padj, NES) %>% 
+  # mutate(experiment = 'exoTIC_2D') %>% 
+  # rbind(salmon.quant$rnaEasy_2D$deseq$H.fgsea %>% 
   select(pathway, padj, NES) %>% 
-  mutate(experiment = 'exoTIC_2D') %>% 
-  rbind(salmon.quant$rnaEasy_2D$deseq$H.fgsea %>% 
-  select(pathway, padj, NES) %>% 
-  mutate(experiment = 'rnaEasy_2D')) %>% 
+  mutate(experiment = 'rnaEasy_2D') %>% 
   rbind(salmon.quant$rnaEasy_3D$deseq$H.fgsea %>% 
   select(pathway, padj, NES) %>% 
   mutate(experiment = 'rnaEasy_3D')) %>% 
