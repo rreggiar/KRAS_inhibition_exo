@@ -4,6 +4,43 @@
 
 ## testing job functionality in Rstudio for running big chunks in background
 
+## load in libs -- these are apparently not included in the environment
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(here)
+  library(ggsci)
+  library(ggpubr)
+  library(ggsignif)
+  library(ggthemes) 
+  library(ggrepel)
+  library(ggforce)
+  library(ggpmisc)
+  library(ggprism)
+  library(patchwork)
+  library(extrafont)
+  library(ggrepel)
+  library(pheatmap)
+  library(viridis)
+  library(patchwork)
+  library(fgsea)
+  library(caret)
+  library(msigdbr)
+  library(matrixStats)
+  library(NMF)
+  library(rsample)
+  library(vip)
+  library(ROCR)
+  library(glmnet)
+  library(mlbench)
+  library(tximeta)
+  library(SummarizedExperiment)
+  library(rjson)
+  library(HDF5Array)
+  library(DESeq2)
+  library(ggpmisc)
+  library(sva)
+})
+suppressMessages(loadfonts())
 
 ## read in toil rsem counts (log21p)
 toil.expected.counts <- read.delim(file.path(output.data.dir, 'tcga.data', 'TcgaTargetGtex_gene_expected_count.gz')) %>%
