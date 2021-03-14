@@ -169,7 +169,9 @@ chr.order <- c('chr1', 'chr2', 'chr3',
 ## saving panels
 ```{r saving panel}
 panel.figure.width = 8.7
+panel.figure.width.in = 3.4252
 panel.figure.height = 22.5
+panel.figure.height.in = 8.858268
 
 panel.save <- function(figure, name, width = 'single', height = 'single'){
   
@@ -189,7 +191,8 @@ panel.save <- function(figure, name, width = 'single', height = 'single'){
     panel.height = panel.figure.height
   }
   
-  ggsave(paste0(figure.dir, 
+  ggsave(paste0(figure.dir,
+                '/',
                 'fig.',
                 figure,
                 '/', 
@@ -207,7 +210,7 @@ panel.save <- function(figure, name, width = 'single', height = 'single'){
 save_pheatmap_pdf <- function(x, filename, width=5, height=3) {
    stopifnot(!missing(x))
    stopifnot(!missing(filename))
-   pdf(filename, width=width, height=height)
+   pdf(filename, width=unit(width, 'cm'), height=unit(height, 'cm'), family = 'Helvetica')
    grid::grid.newpage()
    grid::grid.draw(x$gtable)
    dev.off()
@@ -1051,7 +1054,7 @@ signature.list <- build.signature.lists()
 de.agreement.list <- build.de.agreement.lists(salmon.quant$exoTIC_2D$deseq$de,
                                           salmon.quant$rnaEasy_2D$deseq$de,
                                           salmon.quant$rnaEasy_3D$deseq$de,
-                                          threshold = 1.5, padj_cutoff = 25)
+                                          threshold = 1, padj_cutoff = 25)
 
 ```
 ## FUN: rerwip create.tcga.obj
@@ -1113,10 +1116,7 @@ if (! file.exists(file.path(output.data.dir, 'tcga.data', 'luad.data.frame.tsv')
   
 }
 
-toil.expected.counts <- read_csv(file.path(output.data.dir, 'tcga.data', 'TcgaTargetGtex_gene_expected_count.gz')) %>%
-  select('ensg' = gene, contains('TCGA')) %>% 
-  discard(~sum(.x == 0)/length(.x) >= 0.8) %>% 
-  gather(sample, count, -ensg)
+
   
 
 
@@ -1130,7 +1130,7 @@ norm.counts.final %>%
   filter(KRAS %in% c('p.G12C', 'WT_normal')) %>% 
   # merge(pathway.list %>% rename('.' = 'gene') %>%
   #         group_by(gene) %>% summarise(pathway = list(pathway)), by = 'gene') %>%
-  filter(gene %in% c(de.agreement.list$dn.twoD)) %>%
+  filter(gene %in% c(de.agreement.list$up.consensus)) %>%
   # mutate(pathway = paste(pathway)) %>%
   # group_by(sample, pathway) %>% 
   # summarize(count = mean(count)) %>% 
@@ -1144,11 +1144,16 @@ norm.counts.final %>%
   distinct() %>% 
   column_to_rownames('sample') %>% 
   t() %>% as.data.frame() %>% 
-  pheatmap(show_rownames = T, show_colnames = F, annotation_colors = anno_colors,
+  pheatmap(show_rownames = F, show_colnames = F, annotation_colors = anno_colors, legend = T,
            legend_breaks = c(seq(-4,5,1)),
            annotation_col = luad.phenotypes.merge %>% select(sample, KRAS) %>% 
              distinct() %>% filter(KRAS %in% c('p.G12C', 'WT_normal')) %>% 
-             filter(sample != 'TCGA-44-3917-01') %>% column_to_rownames('sample'))
+             filter(sample != 'TCGA-44-3917-01') %>% column_to_rownames('sample')) -> g12.v.healthy.for.reem.pdf
+
+save_pheatmap_pdf(g12.v.healthy.for.reem.pdf, filename = file.path(output.data.dir, 'g12.v.healthy.for.reem.pdf.pdf'), 
+                  width = panel.figure.width.in*1.5, height = panel.figure.height.in/3)
+
+
   
 
 norm.counts.final %>% 
@@ -1163,6 +1168,8 @@ norm.counts.final %>%
   geom_boxplot() + 
   geom_sina()
 
+set.seed(1241)
+
 myc.avg.counts.tidy.stratified <-
   norm.counts.final %>%
   filter(sample_type == 'Primary Tumor') %>%
@@ -1170,7 +1177,7 @@ myc.avg.counts.tidy.stratified <-
   select(sample, count) %>% 
   group_by(sample) %>%
   summarize(avg.count = mean(count)) %>%
-  mutate(gene.set = 'up.consensus') %>%
+  mutate(gene.set = 'rnaEasy') %>%
   group_by(gene.set) %>%
   mutate(stratum = ifelse(avg.count >= quantile(avg.count, 0.66),
                           'top-third', ifelse(avg.count <= quantile(avg.count, 0.33),
@@ -1187,16 +1194,79 @@ surv.obj <- Surv(time = filter(luad.phenotypes.merge %>% select(sample, OS.time,
                  event = filter(luad.phenotypes.merge %>% select(sample, OS.time, OS) %>% distinct(), sample %in% 
                                  myc.avg.counts.tidy.stratified$sample)$OS)
 
-surv.fit <- survfit(as.formula(surv.obj ~ myc.avg.counts.tidy.stratified$up.consensus), 
+surv.fit <- survfit(as.formula(surv.obj ~ myc.avg.counts.tidy.stratified$rnaEasy), 
                     data = myc.avg.counts.tidy.stratified)
 
 ggsurvplot(surv.fit, 
            pval = T, 
-           ggtheme = theme_set_fun() + theme(legend.position = c(0.95,0.95)), 
+           legend.title = "",
+           ggtheme = theme_set_fun() + theme(legend.position = c(0.25,0.95)),
+           pval.coord = c(0, 0.08),
            palette = viridis(20, option = 'magma')[c(6,18)]) 
 
-# panel.save(figure = 4, name = 'tcag.paad.myc.gene.set.km', height = 'single', width = 'single')
+panel.save(figure = 'supplement', name = 'luad.survival.for.reem', height = 'single', width = 'single')
 
+```
+## FUN: toil.de.seq
+```{r}
+toil.expected.counts <- read.delim(file.path(output.data.dir, 'tcga.data', 'TcgaTargetGtex_gene_expected_count.gz')) %>%
+  select(sample, contains('TCGA')) 
+
+toil.expected.counts %>%
+  rename(sample = 'ensg') %>% 
+  gather(sample, count, -ensg) -> toil.expected.counts.tidy
+
+luad.phenotypes.merge %>% filter(KRAS %in% c('p.G12C', 'WT_normal')) -> luad.kras.merge
+
+toil.expected.counts.tidy %>% 
+  mutate(sample = gsub(sample, pattern = '[.]', replacement = '-')) %>% 
+  merge(luad.kras.merge, by = 'sample') %>% 
+  distinct() -> toil.expected.counts.tidy.merge
+
+toil.expected.counts.final <- 
+  toil.expected.counts.tidy.merge %>% 
+  merge(gen.24.names, by = 'ensg') %>%
+  select(-ensg)
+
+toil.expected.counts.final %>% 
+  select(sample, sample_type, KRAS) %>% 
+  distinct() -> toil.expected.counts.coldata
+
+toil.expected.counts.final %>% 
+  select(sample, gene, count) %>% 
+  pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
+  mutate(across(where(is.numeric), round)) -> toil.expected.counts.matrix
+
+toil.expected.counts.final %>% 
+  select(sample, gene, count) %>% 
+  pivot_wider(names_from = gene, values_from = count, values_fn = mean) %>% 
+  mutate(across(where(is.numeric), ~round((2^.) - 1))) -> toil.expected.counts.unlog..matrix
+
+toil.expected.counts.unlog..matrix %>% column_to_rownames('sample') %>% 
+  t() %>% as.data.frame() -> toil.expected.counts.matrix.t
+
+toil.dds <- DESeqDataSetFromMatrix(countData = toil.expected.counts.matrix.t,
+                                   colData = toil.expected.counts.coldata,
+                                   design = ~KRAS)
+
+toil.dds.keep <- rowSums(counts(toil.dds)) >= 10
+toil.dds <- toil.dds[toil.dds.keep,]
+
+
+toil.dds <- DESeq(toil.dds)
+
+print(resultsNames(toil.dds))
+
+print(tail(resultsNames(toil.dds), n=1))
+
+plotMA(lfcShrink(toil.dds, coef = tail(resultsNames(toil.dds), n=1)))
+
+kras_wt.vs.g12c_de <- lfcShrink(toil.dds, coef = tail(resultsNames(toil.dds), n=1)) %>% 
+  as.data.frame() %>% 
+  filter(padj <= 0.05) %>% 
+  rownames_to_column('gene') %>% 
+  select(gene, baseMean, log2FoldChange, padj) %>% 
+  mutate(log2FoldChange = -log2FoldChange)
 ```
 
 ### boehmke classifier
@@ -1486,15 +1556,15 @@ gencode.de.volcano <- function(de.seq){
       scale_color_manual(values = c(viridis(1)[[1]], viridis(3)[[2]], viridis(5)[[5]])) +
       xlab('log2(Fold Change)') +
       ylab('-log10(p.adj)') + 
-      geom_vline(xintercept = 0, linetype = 'dashed', alpha = 0.4) +
+      geom_vline(xintercept = 0, linetype = 'dashed', alpha = 0.4) #+
       # geom_text_repel(aes(label = ifelse(padj <= label.max & log2FoldChange <= -x.max/1.5| log2FoldChange >= x.max/1.5,
       #                                    as.character(gene), '')),
-      geom_text_repel(aes(label = as.character(gene)),
-                              box.padding = unit('1', 'lines'),
-                              segment.color = 'grey',
-                              segment.alpha = 0.2,
-                              color = 'black',
-                              ylim = c(1, Inf), size = base_size/2, family = 'Helvetica')
+      # geom_text_repel(aes(label = as.character(gene)),
+      #                         box.padding = unit('1', 'lines'),
+      #                         segment.color = 'grey',
+      #                         segment.alpha = 0.2,
+      #                         color = 'black',
+      #                         ylim = c(1, Inf), size = base_size/2, family = 'Helvetica')
 }
 
 fgsea.hallmark.de.volcano <- function(fgsea){
@@ -1537,7 +1607,9 @@ gencode.de.volcano(salmon.quant$exoTIC_2D$deseq$de %>%
                      filter(gene %in% g12c.sc.marker.genes$`G12C supressed`)) + 
   theme(legend.position = c(0.125, 0.95))
 
-gencode.de.volcano(salmon.quant$rnaEasy_all$deseq$de) + theme(legend.position = c(0.95, 0.95))
+gencode.de.volcano(salmon.quant$rnaEasy_3D$deseq$de) + theme(legend.position = c(0.95, 0.95))
+
+panel.save('supplement', 'rnaEasy.3D.for.reem')
 # gencode.35.tx.to.gene %>% 
 #   filter(gene %in% filter(salmon.quant$rnaEasy_2D$deseq$de, gene %in% gencode.35.lnc.gene.names$gene)$gene) %>%
 #   filter(gene %in% filter(salmon.quant$rnaEasy_2D$deseq$de, log2FoldChange >= 1)$gene) %>%
@@ -1565,25 +1637,25 @@ salmon.quant$three_D$deseq$de %>%
 
 salmon.quant$exoTIC_2D$deseq$de %>% 
   # filter(gene %in% g12c.marker.genes$suppressed) %>% 
-  merge(aale.salmon.quant$deseq$de, by = 'gene') %>% 
+  merge(kras_wt.vs.g12c_de, by = 'gene') %>% 
   mutate(biotype = ifelse(gene %in% gencode.35.lnc.gene.names$gene, 'lncRNA','coding')) %>% 
   filter(!grepl('^RPS|^MT', gene)) %>% 
   ggplot(aes(log2FoldChange.x, log2FoldChange.y, color = biotype)) + 
     geom_point() +
-    xlab('exoTIC_2D') + ylab('aale_Exo') + 
+    xlab('exoTIC_2D') + ylab('luad_G12_v_WT') + 
     geom_hline(yintercept = 0, linetype = 'dashed', alpha=0.2) + 
     geom_hline(yintercept = c(-1,1), linetype = 'dashed', alpha=0.1) + 
     geom_vline(xintercept = 0, linetype = 'dashed', alpha=0.2) +
     geom_vline(xintercept = c(-1,1), linetype = 'dashed', alpha=0.1) + 
     scale_color_manual(values = c(viridis(1)[[1]], viridis(3)[[2]], viridis(5)[[5]])) +
     # scale_x_continuous(limits = c(-4, 4), breaks = c(-4, -2, -1, 0, 1, 2, 4)) +
-    geom_text_repel(aes(label = ifelse(abs(log2FoldChange.x) >= 2 | abs(log2FoldChange.y) >= 2,
-                                         as.character(gene), '')),
-                              box.padding = unit('1', 'lines'),
-                              segment.color = 'grey',
-                              segment.alpha = 0.2,
-                              color = 'black',
-                              ylim = c(-Inf, Inf), size = base_size/3, family = 'Helvetica') +
+    # geom_text_repel(aes(label = ifelse(abs(log2FoldChange.x) >= 2 | abs(log2FoldChange.y) >= 2,
+    #                                      as.character(gene), '')),
+    #                           box.padding = unit('1', 'lines'),
+    #                           segment.color = 'grey',
+    #                           segment.alpha = 0.2,
+    #                           color = 'black',
+    #                           ylim = c(-Inf, Inf), size = base_size/3, family = 'Helvetica') +
     theme(legend.position = c(1, 0.85))
 
 
@@ -2099,13 +2171,13 @@ rnaEasy.amg.nanosight.plt #+ rnaEasy.dmso.nanosight.plt
 ### GSEA Heatmaps
 ```{r}
 
-salmon.quant$exoTIC_2D$deseq$fgsea %>%
+salmon.quant$exoTIC_2D$deseq$H.fgsea %>%
   select(pathway, padj, NES) %>% 
   mutate(experiment = 'exoTIC_2D') %>% 
-  rbind(salmon.quant$rnaEasy_2D$deseq$fgsea %>% 
+  rbind(salmon.quant$rnaEasy_2D$deseq$H.fgsea %>% 
   select(pathway, padj, NES) %>% 
   mutate(experiment = 'rnaEasy_2D')) %>% 
-  rbind(salmon.quant$rnaEasy_3D$deseq$fgsea %>% 
+  rbind(salmon.quant$rnaEasy_3D$deseq$H.fgsea %>% 
   select(pathway, padj, NES) %>% 
   mutate(experiment = 'rnaEasy_3D')) %>% 
   mutate(padj = -log10(padj)) %>% 
@@ -2114,7 +2186,11 @@ salmon.quant$exoTIC_2D$deseq$fgsea %>%
   spread(experiment, NES) %>%
   replace(is.na(.), 0) %>%
   column_to_rownames('pathway') %>%
-  pheatmap(color = viridis(32, option = 'magma'))
+  pheatmap(color = viridis(32, option = 'magma'), fontsize = 8, 
+           treeheight_row = 2, treeheight_col = 2) -> h.fgsea.for.reem
+
+save_pheatmap_pdf(h.fgsea.for.reem, filename = file.path(output.data.dir, 'h.fgsea.for.reem.pdf'), 
+                  width = panel.figure.width.in, height = panel.figure.height.in/3)
 
 salmon.quant$exoTIC_2D$deseq$H.fgsea %>%
   select(pathway, padj, NES) %>% 
